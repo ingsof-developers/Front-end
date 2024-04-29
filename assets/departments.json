@@ -1,0 +1,111 @@
+[
+  {
+    "name": "Psicología",
+    "description_info": "Bienvenido al Departamento de Psicología de la Universidad de Guanajuato Campus División de Ingenierias Irapuato - Salamanca (DICIS), donde ofrecemos servicios de atención psicológica para estudiantes. Nuestro equipo de psicólogos altamente capacitados está aquí para brindarte apoyo y orientación en un ambiente confidencial y respetuoso.",
+    "services":
+    [
+      {
+        "name": "Asesoramiento y Orientación",
+        "description": "Nuestros profesionales están disponibles para ayudarte a abordar una amplia gama de preocupaciones, incluyendo estrés, ansiedad, depresión, relaciones interpersonales, autoestima, entre otros."
+      },
+      {
+        "name": "Terapia Individual y de Grupo",
+        "description": "Ofrecemos sesiones de terapia individual y de grupo, adaptadas a tus necesidades específicas, con el objetivo de ayudarte a mejorar tu bienestar emocional y psicológico."
+      },
+      {
+        "name": "Evaluación Psicológica",
+        "description": "Realizamos evaluaciones psicológicas completas para ayudar a comprender mejor tus fortalezas, áreas de mejora y posibles problemas psicológicos."
+      }
+    ],
+    "dates": "Para programar una cita con uno de nuestros psicólogos, simplemente contáctanos a través del botón de generar cita. Nuestro equipo te guiará en el proceso de programación y te ofrecerá la atención que necesitas.",
+    "info": "En el Departamento de Psicología de la Universidad de Guanajuato, estamos comprometidos a proporcionar servicios de atención psicológica de calidad para promover el bienestar y el desarrollo personal de nuestros estudiantes y la comunidad en general. ¡No dudes en ponerte en contacto con nosotros para obtener el apoyo que necesitas!"
+  },
+  {
+    "name": "Nutrición",
+    "description": "Servicios de Atención de Nutrición",
+    "description_info": "Bienvenido al Departamento de Nutrición de la Universidad de Guanajuato Campus División de Ingenierías Irapuato - Salamanca (DICIS). Estamos comprometidos a promover una alimentación saludable y el bienestar nutricional de nuestros estudiantes y la comunidad en general. Nuestro equipo de nutricionistas certificados está aquí para brindarte apoyo y orientación en un ambiente confidencial y respetuoso.",
+    "services":
+    [
+      {
+        "name": "Asesoramiento Nutricional Personalizado",
+        "description": "Nuestros expertos en nutrición están disponibles para ayudarte a abordar una amplia gama de preocupaciones relacionadas con la alimentación y la nutrición, como la pérdida o ganancia de peso, la planificación de dietas equilibradas, las alergias alimentarias, y más."
+      },
+      {
+        "name": "Educación Alimentaria",
+        "description": "Ofrecemos sesiones educativas para brindarte información sobre hábitos alimenticios saludables, lectura de etiquetas nutricionales, planificación de comidas y estrategias para mantener un estilo de vida nutricionalmente equilibrado."
+      },
+      {
+        "name": "Consulta Individual y en Grupo",
+        "description": "Ya sea que prefieras sesiones individuales o grupales, nuestro equipo está aquí para adaptarse a tus necesidades. Ofrecemos consultas tanto en formato individual como en grupo para abordar tus preocupaciones de manera efectiva y brindarte el apoyo necesario."
+      }
+    ],
+    "dates": "Para programar una consulta con uno de nuestros nutricionistas, simplemente contáctanos a través del botón de generar consulta. Nuestro equipo te guiará en el proceso de programación y te ofrecerá la atención personalizada que necesitas para alcanzar tus objetivos nutricionales.",
+    "info": "En el Departamento de Nutrición de la Universidad de Guanajuato, estamos comprometidos a proporcionar servicios de nutrición de calidad para promover la salud y el bienestar de nuestra comunidad. ¡No dudes en ponerte en contacto con nosotros para obtener el apoyo que necesitas para alcanzar tus metas nutricionales!"
+  },
+  {
+    "name": "Activación Física",
+    "description": "Servicios de Atención de Activación Física",
+    "description_info": "Bienvenido al Departamento de Activación Física de la Universidad de Guanajuato Campus División de Ingenierías Irapuato - Salamanca (DICIS). Estamos comprometidos a promover un estilo de vida activo y saludable para nuestros estudiantes y la comunidad en general.",
+    "services":
+    [
+      {
+        "name": "Programas de Ejercicio Personalizados",
+        "description": "Nuestros entrenadores especializados están disponibles para diseñar programas de ejercicio personalizados según tus objetivos de fitness y necesidades individuales."
+      },
+      {
+        "name": "Clases de Grupo",
+        "description": "Ofrecemos una variedad de clases de grupo, que incluyen yoga, aeróbicos, baile y más, para ayudarte a mantenerte activo y motivado en un ambiente de apoyo y camaradería."
+      },
+      {
+        "name": "Asesoramiento en Estilo de Vida Saludable",
+        "description": "Nuestros expertos en activación física brindan asesoramiento sobre hábitos de vida saludables, nutrición adecuada y estrategias para mantener una mente y un cuerpo saludables."
+      }
+    ],
+    "dates": "Para participar en nuestras actividades de activación física, simplemente ponte en contacto con nosotros a través del botón de registrar cita. ¡Nuestro equipo te ayudará a encontrar la actividad adecuada para ti y te guiará en tu viaje hacia un estilo de vida más activo y saludable!",
+    "info": "En el Departamento de Activación Física de la Universidad de Guanajuato, estamos comprometidos a promover la salud y el bienestar a través del ejercicio y la actividad física. ¡Únete a nosotros y comienza tu viaje hacia una vida más activa y saludable hoy mismo!"
+  },
+  {
+    "name": "Orientación Educativa",
+    "description": "Servicios de Atención de Orientación Educativa",
+    "description_info": "Bienvenido al Departamento de Orientación Educativa de la Universidad de Guanajuato Campus División de Ingenierías Irapuato - Salamanca (DICIS), estamos comprometidos a brindar apoyo y orientación a nuestros estudiantes para ayudarlos a alcanzar su máximo potencial académico y personal.",
+    "services":
+    [
+      {
+        "name": "Asesoramiento Académico",
+        "description": "Nuestros consejeros educativos están disponibles para ayudarte a planificar tu carrera académica, elegir tus cursos y programas de estudio, y desarrollar estrategias efectivas de aprendizaje."
+      },
+      {
+        "name": "Apoyo en la Toma de Decisiones",
+        "description": "¿Tienes dudas sobre tu futuro académico o profesional? Nuestro equipo de orientación está aquí para ayudarte a explorar tus intereses, habilidades y opciones para que puedas tomar decisiones informadas sobre tu educación y tu carrera."
+      },
+      {
+        "name": "Desarrollo Personal",
+        "description": "Ofrecemos talleres y sesiones individuales para ayudarte a desarrollar habilidades de estudio, manejo del tiempo, resolución de problemas y toma de decisiones, que te serán útiles tanto en tu vida académica como en tu vida personal."
+      }
+    ],
+    "dates": "Para aprovechar nuestros servicios de orientación educativa, simplemente contáctanos para programar una cita a través del boton registrar cita. Estamos aquí para ayudarte en cualquier etapa de tu viaje educativo, desde la orientación inicial hasta el desarrollo continuo a lo largo de tus estudios universitarios.",
+    "info": "En el Departamento de Orientación Educativa de la Universidad de Guanajuato, estamos comprometidos a brindarte el apoyo que necesitas para tener éxito en tus estudios y en tu vida personal. ¡No dudes en comunicarte con nosotros para comenzar tu viaje hacia un futuro académico brillante!"
+  },
+  {
+    "name": "Tutoría",
+    "description": "Servicios de Atención de Tutoría",
+    "description_info": "Bienvenido al Departamento de Tutoría de la Universidad de Guanajuato Campus División de Ingenierías Irapuato - Salamanca (DICIS), estamos aquí para apoyarte en tu camino académico y ayudarte a alcanzar tus metas educativas.",
+    "services":
+    [
+      {
+        "name": "Apoyo Académico Personalizado",
+        "description": "Nuestros tutores altamente calificados están disponibles para ayudarte en áreas específicas de tus estudios, ya sea matemáticas, ciencias, idiomas u otras asignaturas."
+      },
+      {
+        "name": "Asistencia en Tareas y Proyectos",
+        "description": "¿Necesitas ayuda con una tarea difícil o un proyecto importante? Nuestros tutores están aquí para proporcionarte la orientación y el apoyo que necesitas para tener éxito."
+      },
+      {
+        "name": "Desarrollo de Habilidades de Estudio",
+        "description": "Además de ayudarte con contenido académico, nuestros tutores pueden brindarte consejos y técnicas para mejorar tus habilidades de estudio, organización y concentración."
+      }
+    ],
+    "dates": "Para programar una sesión de tutoría, simplemente contáctanos a través del boton registrar cita. Ya sea que necesites ayuda con una asignatura específica o quieras mejorar tus habilidades de estudio en general. Nuestros tutores están aquí para ayudarte a tener éxito en tu educación universitaria.",
+    "info": "En el Departamento de Tutoría de la Universidad de Guanajuato, estamos comprometidos a brindarte el apoyo académico que necesitas para alcanzar tus metas. ¡No dudes en comunicarte con nosotros y comenzar tu viaje hacia el éxito académico hoy mismo!"
+  }
+]

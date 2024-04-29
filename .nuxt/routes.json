@@ -1,0 +1,37 @@
+[
+  {
+    "name": "cita",
+    "path": "/cita",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/cita/index.vue",
+    "chunkName": "pages/cita/index",
+    "_name": "_ec5fc0de"
+  },
+  {
+    "name": "departamento",
+    "path": "/departamento",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/departamento/index.vue",
+    "chunkName": "pages/departamento/index",
+    "_name": "_e55793fc"
+  },
+  {
+    "name": "home",
+    "path": "/home",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/home/index.vue",
+    "chunkName": "pages/home/index",
+    "_name": "_b02307c6"
+  },
+  {
+    "name": "signup",
+    "path": "/signup",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/signup/index.vue",
+    "chunkName": "pages/signup/index",
+    "_name": "_2ab6cf54"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_5cea94b2"
+  }
+]
