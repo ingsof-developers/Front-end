@@ -1,0 +1,68 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import { normalizeURL, decode } from 'ufo'
+import { interopDefault } from './utils'
+import scrollBehavior from './router.scrollBehavior.js'
+
+const _ec5fc0de = () => interopDefault(import('../pages/cita/index.vue' /* webpackChunkName: "pages/cita/index" */))
+const _e55793fc = () => interopDefault(import('../pages/departamento/index.vue' /* webpackChunkName: "pages/departamento/index" */))
+const _b02307c6 = () => interopDefault(import('../pages/home/index.vue' /* webpackChunkName: "pages/home/index" */))
+const _2ab6cf54 = () => interopDefault(import('../pages/signup/index.vue' /* webpackChunkName: "pages/signup/index" */))
+const _5cea94b2 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+
+const emptyFn = () => {}
+
+Vue.use(Router)
+
+export const routerOptions = {
+  mode: 'history',
+  base: '/',
+  linkActiveClass: 'nuxt-link-active',
+  linkExactActiveClass: 'nuxt-link-exact-active',
+  scrollBehavior,
+
+  routes: [{
+    path: "/cita",
+    component: _ec5fc0de,
+    name: "cita"
+  }, {
+    path: "/departamento",
+    component: _e55793fc,
+    name: "departamento"
+  }, {
+    path: "/home",
+    component: _b02307c6,
+    name: "home"
+  }, {
+    path: "/signup",
+    component: _2ab6cf54,
+    name: "signup"
+  }, {
+    path: "/",
+    component: _5cea94b2,
+    name: "index"
+  }],
+
+  fallback: false
+}
+
+export function createRouter (ssrContext, config) {
+  const base = (config._app && config._app.basePath) || routerOptions.base
+  const router = new Router({ ...routerOptions, base  })
+
+  // TODO: remove in Nuxt 3
+  const originalPush = router.push
+  router.push = function push (location, onComplete = emptyFn, onAbort) {
+    return originalPush.call(this, location, onComplete, onAbort)
+  }
+
+  const resolve = router.resolve.bind(router)
+  router.resolve = (to, current, append) => {
+    if (typeof to === 'string') {
+      to = normalizeURL(to)
+    }
+    return resolve(to, current, append)
+  }
+
+  return router
+}
