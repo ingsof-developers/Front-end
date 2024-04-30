@@ -1,5 +1,6 @@
 export { default as UiAlert } from '../../components/ui-alert.vue'
 export { default as UiDateForm } from '../../components/ui-date-form.vue'
+export { default as UiPopUp } from '../../components/ui-pop-up.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

@@ -1,8 +1,8 @@
   <!-- eslint-disable vue/max-attributes-per-line -->
 <template>
   <v-app>
-    <v-main class="d-flex justify-center align-center">
-      <v-sheet height="90vh" width="100%" color="#fcfdff" class="d-flex flex-column ma-0 pa-0 justify-center">
+    <v-main class="d-flex justify-center align-center" justify="center" align="center">
+      <v-sheet height="100%" width="100%" class="d-flex flex-column ma-0 pa-0 justify-center" justify="center" align="center">
         <div class="pa-0 ma-0 d-flex flex-column justify-center" justify="center" align="center">
           <v-card class="d-flex flex-column px-10 py-6 justify-center" width="500" rounded="xxl" color="#eff7fe" justify="center" align="center">
             <v-card-title justify="center" align="center" class="mt-10">

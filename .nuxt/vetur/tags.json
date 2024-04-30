@@ -4,5 +4,8 @@
   },
   "UiDateForm": {
     "description": "Auto imported from components/ui-date-form.vue"
+  },
+  "UiPopUp": {
+    "description": "Auto imported from components/ui-pop-up.vue"
   }
 }
