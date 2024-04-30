@@ -1,14 +1,21 @@
 <template>
   <v-app>
     <v-main>
-      <v-sheet height="90vh" width="100%" color="#fcfdff" class="d-flex flex-column pa-10">
+      <v-sheet height="100%" width="100%" color="#fcfdff" class="d-flex flex-column pa-10">
         <v-col class="pa-0 ma-0">
           <v-row align="center" justify="center">
-            <v-col cols="3" align="center" justify="center">
-              <v-avatar class="mb-4" color="grey darken-1" size="150" />
+            <v-col
+              cols="6"
+              sm="4"
+              md="3"
+              lg="2"
+              align="center"
+              justify="center"
+            >
+              <v-avatar class="mb-4" color="grey darken-1" size="150" align="center" justify="center" />
             </v-col>
 
-            <v-col align="center" justify="center">
+            <v-col class="ma-0 pa-0">
               <v-row class="ma-0 pa-0">
                 <p style="font-size: 35px;">
                   Nombre y Apellidos

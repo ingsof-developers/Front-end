@@ -8,3 +8,4 @@ You can directly use them in pages and other components without the need to impo
 
 - `<UiAlert>` | `<ui-alert>` (components/ui-alert.vue)
 - `<UiDateForm>` | `<ui-date-form>` (components/ui-date-form.vue)
+- `<UiPopUp>` | `<ui-pop-up>` (components/ui-pop-up.vue)

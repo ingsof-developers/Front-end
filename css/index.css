@@ -17,3 +17,14 @@
   max-height: 90vh !important;
   min-height: 90vh !important;
 }
+
+.divider
+{
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.v-menu__content
+{
+  top: 0px !important;
+  background-color: white !important;
+}
