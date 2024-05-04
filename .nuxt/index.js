@@ -12,10 +12,10 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_320d4efe from 'nuxt_plugin_plugin_320d4efe' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_plugin_8848b9e6 from 'nuxt_plugin_plugin_8848b9e6' // Source: ./vuetify/plugin.js (mode: 'all')
-import nuxt_plugin_axios_49037d17 from 'nuxt_plugin_axios_49037d17' // Source: ./axios.js (mode: 'all')
-import nuxt_plugin_uicomponents_4f54119c from 'nuxt_plugin_uicomponents_4f54119c' // Source: ../plugins/ui-components.js (mode: 'all')
+import nuxt_plugin_plugin_0158c938 from 'nuxt_plugin_plugin_0158c938' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_plugin_eb238488 from 'nuxt_plugin_plugin_eb238488' // Source: .\\vuetify\\plugin.js (mode: 'all')
+import nuxt_plugin_axios_616b5d4a from 'nuxt_plugin_axios_616b5d4a' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_uicomponents_4f54119c from 'nuxt_plugin_uicomponents_4f54119c' // Source: ..\\plugins\\ui-components.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -181,16 +181,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_320d4efe === 'function') {
-    await nuxt_plugin_plugin_320d4efe(app.context, inject)
+  if (typeof nuxt_plugin_plugin_0158c938 === 'function') {
+    await nuxt_plugin_plugin_0158c938(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_plugin_8848b9e6 === 'function') {
-    await nuxt_plugin_plugin_8848b9e6(app.context, inject)
+  if (typeof nuxt_plugin_plugin_eb238488 === 'function') {
+    await nuxt_plugin_plugin_eb238488(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_49037d17 === 'function') {
-    await nuxt_plugin_axios_49037d17(app.context, inject)
+  if (typeof nuxt_plugin_axios_616b5d4a === 'function') {
+    await nuxt_plugin_axios_616b5d4a(app.context, inject)
   }
 
   if (typeof nuxt_plugin_uicomponents_4f54119c === 'function') {

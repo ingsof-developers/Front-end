@@ -6,12 +6,12 @@ import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '../css/index.css'
+import '..\\css\\index.css'
 
-import '../node_modules/vuetify/dist/vuetify.css'
+import '..\\node_modules\\vuetify\\dist\\vuetify.css'
 
-import _132d907c from '../layouts/ui-home.vue'
-import _06a5b842 from '../layouts/ui-login-signup.vue'
+import _132d907c from '..\\layouts\\ui-home.vue'
+import _06a5b842 from '..\\layouts\\ui-login-signup.vue'
 import _6f6c098b from './layouts/default.vue'
 
 const layouts = { "_ui-home": sanitizeComponent(_132d907c),"_ui-login-signup": sanitizeComponent(_06a5b842),"_default": sanitizeComponent(_6f6c098b) }

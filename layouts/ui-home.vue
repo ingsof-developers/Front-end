@@ -46,4 +46,47 @@ export default {
     }
   }
 }
+
+/**
+ * import axios from 'axios'; // Importa axios para realizar solicitudes HTTP
+
+export default {
+  // Define el nombre del componente
+  name: 'AppBar',
+
+  // Datos del componente
+  data () {
+    return {
+      pops: [], // Array para almacenar las notificaciones
+      opciones: [
+        { icon: 'mdi-notebook', path: '/' }, // Opción de navegación a la página principal
+        { icon: 'mdi-history', path: '' },   // Opción de navegación a una página de historial (falta la ruta)
+        { icon: 'mdi-account', path: '' }    // Opción de navegación a una página de perfil (falta la ruta)
+      ]
+    }
+  },
+
+  // Método que se ejecuta cuando el componente se monta
+  mounted () {
+    // Llama a la función fetchNotifications para obtener las notificaciones
+    this.fetchNotifications();
+  },
+
+  // Métodos del componente
+  methods: {
+    /**
+     * Realiza una solicitud HTTP GET para obtener las notificaciones desde la API.
+     * Las notificaciones obtenidas se asignan al array pops del componente.
+    async fetchNotifications () {
+      try {
+        const response = await axios.get('/api/notifications'); // Realiza la solicitud GET
+        this.pops = response.data; // Asigna las notificaciones obtenidas al array pops
+      } catch (error) {
+        // Si hay un error al obtener las notificaciones, manejarlo aquí
+        console.error('Error al obtener las notificaciones:', error);
+      }
+    }
+  }
+}
+ */
 </script>
