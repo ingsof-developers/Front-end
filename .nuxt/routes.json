@@ -3,35 +3,36 @@
     "name": "cita",
     "path": "/cita",
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\cita\\\\index.vue",
-    "chunkName": "pages/cita/index",
-    "_name": "_49373f70"
+    "chunkName": "pages/cita/index"
   },
   {
     "name": "departamento",
     "path": "/departamento",
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\departamento\\\\index.vue",
-    "chunkName": "pages/departamento/index",
-    "_name": "_2088c3f7"
+    "chunkName": "pages/departamento/index"
+  },
+  {
+    "name": "historial",
+    "path": "/historial",
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\historial\\\\index.vue",
+    "chunkName": "pages/historial/index"
   },
   {
     "name": "home",
     "path": "/home",
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\home\\\\index.vue",
-    "chunkName": "pages/home/index",
-    "_name": "_fddcd588"
+    "chunkName": "pages/home/index"
   },
   {
     "name": "signup",
     "path": "/signup",
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
-    "chunkName": "pages/signup/index",
-    "_name": "_768a8b23"
+    "chunkName": "pages/signup/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_be7bd08a"
+    "chunkName": "pages/index"
   }
 ]

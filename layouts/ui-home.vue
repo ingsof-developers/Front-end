@@ -40,7 +40,7 @@ export default {
       ],
       opciones: [
         { icon: 'mdi-notebook', path: '/' },
-        { icon: 'mdi-history', path: '' },
+        { icon: 'mdi-history', path: '/historial' },
         { icon: 'mdi-account', path: '' }
       ]
     }
