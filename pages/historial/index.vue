@@ -12,26 +12,7 @@
         <p v-if="!departamento_data.length" style="font-size: 20px;">{{ mensajeDepartamento }}</p>
       </v-row>
 
-      <!-- Tabla de citas pasadas -->
-      <v-simple-table v-if="departamento_data.length && showAllCitas">
-        <template v-slot:default>
-          <thead>
-            <tr>
-              <th class="text-left" style="font-size: 24px;">Departamento</th>
-              <th class="text-left" style="font-size: 24px;">Fecha</th>
-              <!-- Agrega más columnas según sea necesario -->
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(cita, index) in departamento_data" :key="index">
-              <td style="font-size: 20px;">{{ cita.departamentoName }}</td>
-              <td style="font-size: 20px;">{{ cita.fecha }}</td> <!-- Suponiendo que hay una propiedad 'fecha' en tu objeto 'cita' -->
-              <!-- Agrega más celdas según sea necesario -->
-            </tr>
-          </tbody>
-        </template>
-      </v-simple-table>
-
+      <ui-calendar />
     </v-container>
   </v-app>
 </template>
@@ -65,6 +46,8 @@ export default {
       this.departamento_data = [
         { departamentoName: 'Tutoría', fecha: '2024-05-01' },
         { departamentoName: 'Activación física', fecha: '2024-04-25' },
+        { departamentoName: 'Nutricióm', fecha: '2024-03-10' },
+        { departamentoName: 'Nutricióm', fecha: '2024-03-10' },
         { departamentoName: 'Nutricióm', fecha: '2024-03-10' }
         // Agrega más citas según sea necesario
       ]
