@@ -7,7 +7,6 @@
             ref="date"
             v-model="date"
             :close-on-content-click="false"
-            :return-value.sync="dates"
             transition="scale-transition"
             offset-y
             min-width="auto"
@@ -20,7 +19,9 @@
                 clearable
                 style="border: 0.5px solid black !important; border-radius: 50px; height: 56px;"
                 v-bind="attrs"
+                readonly
                 v-on="on"
+                @click="date = true"
               />
             </template>
 
@@ -30,22 +31,12 @@
               scrollable
               locale="es"
               header-color="#00468C"
-              :min="dates"
-            >
-              <v-spacer />
-
-              <v-btn text @click="date = false">
-                Cancel
-              </v-btn>
-
-              <v-btn text @click="$refs.date.save(dates)">
-                OK
-              </v-btn>
-            </v-date-picker>
+              @input="closeDatePicker"
+            />
           </v-menu>
         </v-row>
 
-        <v-row class="ma-0 pa-0 mt-5">
+        <v-row class="ma-0 pa-0 mt-8">
           <v-select
             v-model="schedule"
             :items="schedules"
@@ -88,8 +79,22 @@ export default {
       required: value => !!value || 'Required field',
       password: value => (value && value.length > 5) || 'Password must be more than 5 chars',
       schedules: ['8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 pm', '1:00 pm', '2:00 pm'],
-      dates: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)
+      dates: ''
+    }
+  },
+  methods: {
+    closeDatePicker () {
+      this.date = false
     }
   }
 }
 </script>
+
+<style scoped>
+
+.v-menu__content
+{
+  border-radius: 50px !important;
+}
+
+</style>
