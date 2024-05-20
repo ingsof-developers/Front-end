@@ -92,7 +92,7 @@ export default {
             setTimeout(() => {
               this.showAlert = false
 
-              this.$router.push('/signup')
+              this.$router.push('/gecia')
             }, 3000)
           }
         } catch (err) {
