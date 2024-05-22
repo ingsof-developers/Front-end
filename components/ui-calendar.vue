@@ -45,10 +45,11 @@ export default {
     mode: 'stack',
     modes: ['stack', 'column'],
     weekday: [0, 1, 2, 3, 4, 5, 6],
-    value: '',
+    value: new Date().toISOString().substr(0, 10), // Inicializar con la fecha actual en formato ISO
     events: [],
     colors: ['blue'],
-    names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party']
+    names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party'],
+    dialog: false // Agregar esta línea para el estado del diálogo
   }),
   methods: {
     getEvents ({ start, end }) {
@@ -84,6 +85,10 @@ export default {
       const currentDate = new Date(this.value)
       const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
       return months[currentDate.getMonth()] // Obtener el nombre del mes actual
+    },
+    showDialog (date) {
+      console.log('Fecha clickeada:', date)
+      this.dialog = true
     },
     rnd (a, b) {
       return Math.floor((b - a + 1) * Math.random()) + a
