@@ -28,6 +28,10 @@
                 <v-row>
                   <v-text-field v-model="password_user" clearable type="password" rounded label="Password" outlined :rules="[required, password]" />
                 </v-row>
+
+                <v-row>
+                  <v-text-field v-model="phone" clearable type="text" rounded label="Phone" outlined :rules="[required]" />
+                </v-row>
               </v-form>
             </v-card-text>
 
@@ -67,6 +71,7 @@ export default {
       last_name_user: null,
       maternal_surname_user: null,
       password_user: null,
+      phone: null,
       showAlert: false,
       alertText: '',
       alertColor: '',
@@ -84,10 +89,11 @@ export default {
         try {
           const res = await this.$axios.post('http://localhost:8081/auth/register',
             {
-              name: this.name_user,
-              last_Name: this.last_name_user,
-              maternal_Surname: this.maternal_surname_user,
-              password: this.password_user
+              username: this.name_user,
+              lastName: this.last_name_user,
+              maternalSurname: this.maternal_surname_user,
+              password: this.password_user,
+              telefono: this.phone
             })
 
           console.log('@ Keyla => Res ', res)
