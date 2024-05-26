@@ -2,64 +2,64 @@
   {
     "name": "gecia",
     "path": "/gecia",
-    "component": "C:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\index.vue",
+    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\index.vue",
     "chunkName": "pages/gecia/index",
-    "_name": "_0367956a"
+    "_name": "_6b19072a"
   },
   {
     "name": "gecid",
     "path": "/gecid",
-    "component": "C:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecid\\\\index.vue",
+    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecid\\\\index.vue",
     "chunkName": "pages/gecid/index",
-    "_name": "_1a7c8587"
+    "_name": "_3cef26f0"
   },
   {
     "name": "signup",
     "path": "/signup",
-    "component": "C:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
+    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
     "chunkName": "pages/signup/index",
-    "_name": "_35039cb5"
+    "_name": "_4f7495d4"
   },
   {
     "name": "gecia-date",
     "path": "/gecia/date",
-    "component": "C:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\date\\\\index.vue",
+    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\date\\\\index.vue",
     "chunkName": "pages/gecia/date/index",
-    "_name": "_27635d08"
+    "_name": "_19119886"
   },
   {
     "name": "gecia-departments",
     "path": "/gecia/departments",
-    "component": "C:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\departments\\\\index.vue",
+    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\departments\\\\index.vue",
     "chunkName": "pages/gecia/departments/index",
-    "_name": "_b0bcd42e"
+    "_name": "_257a4ef0"
   },
   {
     "name": "gecia-history",
     "path": "/gecia/history",
-    "component": "C:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\history\\\\index.vue",
+    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\history\\\\index.vue",
     "chunkName": "pages/gecia/history/index",
-    "_name": "_19362ad6"
+    "_name": "_47e794f5"
   },
   {
     "name": "gecia-profile",
     "path": "/gecia/profile",
-    "component": "C:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\profile\\\\index.vue",
+    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\profile\\\\index.vue",
     "chunkName": "pages/gecia/profile/index",
-    "_name": "_2750f6a1"
+    "_name": "_560260c0"
   },
   {
     "name": "gecid-profile",
     "path": "/gecid/profile",
-    "component": "C:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecid\\\\profile\\\\index.vue",
+    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecid\\\\profile\\\\index.vue",
     "chunkName": "pages/gecid/profile/index",
-    "_name": "_4d1bd724"
+    "_name": "_7bcd4143"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\index.vue",
+    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_58b24966"
+    "_name": "_3dd6636c"
   }
 ]

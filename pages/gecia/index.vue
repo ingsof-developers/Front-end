@@ -91,7 +91,7 @@
 </template>
 
 <script>
-import departments from '@/assets/departments.json'
+import axios from 'axios'
 
 export default {
   name: 'GeciaProfile',
@@ -112,7 +112,13 @@ export default {
     }
   },
   mounted () {
-    this.departamentos = departments
+    axios.get('http://localhost:8081/departamentos/all')
+      .then((response) => {
+        this.departamentos = response.data
+      })
+      .catch((error) => {
+        console.error(error)
+      })
   },
   methods: {
     departamento_seleccionado (departamento) {

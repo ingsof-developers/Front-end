@@ -40,7 +40,7 @@
           <div class="ma-0 pa-0 mx-15" justify="center" align="center">
             <v-row class="ma-0 pa-0 mt-7" justify="center" align="center">
               <p style="font-size: 20px" justify="center" align="center">
-                {{ departamento_data.description_info }}
+                {{ departamento_data.descriptionInfo }}
               </p>
             </v-row>
 
@@ -56,7 +56,7 @@
                   </p>
 
                   <p class="ma-0 pa-0" style="font-size: 20px" justify="center" align="center">
-                    {{ servicio.description }}
+                    {{ servicio.descripcion }}
                   </p>
                 </v-row>
               </v-row>
@@ -93,9 +93,8 @@
     </v-main>
   </v-app>
 </template>
-
 <script>
-import departments from '@/assets/departments.json'
+import axios from 'axios'
 
 export default {
   name: 'GeciaDepartments',
@@ -117,16 +116,23 @@ export default {
     }
   },
   mounted () {
-    const departamentoName = localStorage.getItem('department_name')
+    axios.get('http://localhost:8081/departamentos/all')
+      .then((response) => {
+        const departments = response.data
+        const departamentoName = localStorage.getItem('department_name')
 
-    console.log('Departamento departments', departamentoName)
+        console.log('Departamento departments', departamentoName)
 
-    if (departamentoName) {
-      this.departamento_data = this.findDepartamento(departamentoName)
-    }
+        if (departamentoName) {
+          this.departamento_data = this.findDepartamento(departamentoName, departments)
+        }
+      })
+      .catch((error) => {
+        console.error('There was an error!', error)
+      })
   },
   methods: {
-    findDepartamento (name) {
+    findDepartamento (name, departments) {
       return departments.find(departamento => departamento.name === name)
     },
     cita () {
