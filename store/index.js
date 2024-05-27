@@ -27,8 +27,8 @@ const store = () => new Vuex.Store({
       }
     ],
     opciones: [
-      { icon: 'mdi-notebook', path: '' },
-      { icon: 'mdi-history', path: '' }
+      { icon: 'mdi-notebook', path: '/gecia/date' },
+      { icon: 'mdi-history', path: '/gecia/history' }
     ],
     profile: {
       icon: 'mdi-account',
@@ -59,8 +59,8 @@ const store = () => new Vuex.Store({
       }
     ],
     gecid_opciones: [
-      { icon: 'mdi-notebook', path: '' },
-      { icon: 'mdi-history', path: '' }
+      { icon: 'mdi-notebook', path: '/gecid/date' },
+      { icon: 'mdi-history', path: '/gecid/history' }
     ],
     gecid_profile: {
       icon: 'mdi-account',

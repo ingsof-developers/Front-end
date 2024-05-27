@@ -1,9 +1,9 @@
-   <!-- eslint-disable vue/max-attributes-per-line -->
+<!-- eslint-disable vue/max-attributes-per-line -->
 <template>
   <v-app>
     <v-main>
       <v-sheet height="100%" width="100%" class="d-flex flex-column px-10 justify-center" justify="center" align="center">
-        <div class="pa-0 ma-0 d-flex flex-column justify-center" justify="center" align="center">
+        <div class="pa-0 ma-0 d-flex flex-column align-center justify-center" justify="center" align="center">
           <v-card class="d-flex flex-column pa-10 justify-center" width="500" rounded="xxl" color="#eff7fe" justify="center" align="center">
             <v-card-title justify="center" align="center" class="mt-10">
               <v-row class="ma-0 pa-0" style="width: 100%; font-size: 40px; font-weight: 600;" justify="center" align="center">

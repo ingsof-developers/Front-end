@@ -4,15 +4,17 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _6b19072a = () => interopDefault(import('..\\pages\\gecia\\index.vue' /* webpackChunkName: "pages/gecia/index" */))
-const _3cef26f0 = () => interopDefault(import('..\\pages\\gecid\\index.vue' /* webpackChunkName: "pages/gecid/index" */))
-const _4f7495d4 = () => interopDefault(import('..\\pages\\signup\\index.vue' /* webpackChunkName: "pages/signup/index" */))
-const _19119886 = () => interopDefault(import('..\\pages\\gecia\\date\\index.vue' /* webpackChunkName: "pages/gecia/date/index" */))
-const _257a4ef0 = () => interopDefault(import('..\\pages\\gecia\\departments\\index.vue' /* webpackChunkName: "pages/gecia/departments/index" */))
-const _47e794f5 = () => interopDefault(import('..\\pages\\gecia\\history\\index.vue' /* webpackChunkName: "pages/gecia/history/index" */))
-const _560260c0 = () => interopDefault(import('..\\pages\\gecia\\profile\\index.vue' /* webpackChunkName: "pages/gecia/profile/index" */))
-const _7bcd4143 = () => interopDefault(import('..\\pages\\gecid\\profile\\index.vue' /* webpackChunkName: "pages/gecid/profile/index" */))
-const _3dd6636c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _e9be9116 = () => interopDefault(import('../pages/gecia/index.vue' /* webpackChunkName: "pages/gecia/index" */))
+const _49cecfb8 = () => interopDefault(import('../pages/gecid/index.vue' /* webpackChunkName: "pages/gecid/index" */))
+const _2ab6cf54 = () => interopDefault(import('../pages/signup/index.vue' /* webpackChunkName: "pages/signup/index" */))
+const _33b16f1e = () => interopDefault(import('../pages/gecia/date/index.vue' /* webpackChunkName: "pages/gecia/date/index" */))
+const _b9b93472 = () => interopDefault(import('../pages/gecia/departments/index.vue' /* webpackChunkName: "pages/gecia/departments/index" */))
+const _65db068c = () => interopDefault(import('../pages/gecia/history/index.vue' /* webpackChunkName: "pages/gecia/history/index" */))
+const _17d98b8f = () => interopDefault(import('../pages/gecia/profile/index.vue' /* webpackChunkName: "pages/gecia/profile/index" */))
+const _4f31ee8a = () => interopDefault(import('../pages/gecid/date/index.vue' /* webpackChunkName: "pages/gecid/date/index" */))
+const _3611a1fd = () => interopDefault(import('../pages/gecid/history/index.vue' /* webpackChunkName: "pages/gecid/history/index" */))
+const _fe4e9e5c = () => interopDefault(import('../pages/gecid/profile/index.vue' /* webpackChunkName: "pages/gecid/profile/index" */))
+const _5cea94b2 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -27,39 +29,47 @@ export const routerOptions = {
 
   routes: [{
     path: "/gecia",
-    component: _6b19072a,
+    component: _e9be9116,
     name: "gecia"
   }, {
     path: "/gecid",
-    component: _3cef26f0,
+    component: _49cecfb8,
     name: "gecid"
   }, {
     path: "/signup",
-    component: _4f7495d4,
+    component: _2ab6cf54,
     name: "signup"
   }, {
     path: "/gecia/date",
-    component: _19119886,
+    component: _33b16f1e,
     name: "gecia-date"
   }, {
     path: "/gecia/departments",
-    component: _257a4ef0,
+    component: _b9b93472,
     name: "gecia-departments"
   }, {
     path: "/gecia/history",
-    component: _47e794f5,
+    component: _65db068c,
     name: "gecia-history"
   }, {
     path: "/gecia/profile",
-    component: _560260c0,
+    component: _17d98b8f,
     name: "gecia-profile"
   }, {
+    path: "/gecid/date",
+    component: _4f31ee8a,
+    name: "gecid-date"
+  }, {
+    path: "/gecid/history",
+    component: _3611a1fd,
+    name: "gecid-history"
+  }, {
     path: "/gecid/profile",
-    component: _7bcd4143,
+    component: _fe4e9e5c,
     name: "gecid-profile"
   }, {
     path: "/",
-    component: _3dd6636c,
+    component: _5cea94b2,
     name: "index"
   }],
 
