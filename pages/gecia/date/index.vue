@@ -37,7 +37,7 @@
             </p>
           </v-row>
 
-          <ui-date-form />
+          <ui-date-form @update="updateValues" />
 
           <v-row class="ma-0 pa-0 mt-10" justify="center" align="center">
             <v-btn rounded color="#00468C" class="ma-0 pa-6" @click="cita()">
@@ -51,14 +51,18 @@
 </template>
 
 <script>
-import departments from '@/assets/departments.json'
+import axios from 'axios'
 
 export default {
   name: 'GeciaDate',
   data () {
     return {
       departamento_data: null,
-      departamentoName: ''
+      departamentoName: '',
+      departments: [],
+      fecha: null,
+      hora: null,
+      notas: null
     }
   },
   computed: {
@@ -74,16 +78,49 @@ export default {
   },
   mounted () {
     const departamentoName = localStorage.getItem('department_name')
+    const departamentoId = localStorage.getItem('department_id')
 
+    console.log('Departamento', departamentoId)
     console.log('Departamento', departamentoName)
 
-    if (departamentoName) {
-      this.departamento_data = this.findDepartamento(departamentoName)
-    }
+    axios.get('http://localhost:8081/departamentos/all')
+      .then((response) => {
+        this.departments = response.data
+        if (departamentoName) {
+          this.departamento_data = this.findDepartamento(departamentoName)
+        }
+      })
+      .catch((error) => {
+        console.error('There was an error!', error)
+      })
   },
   methods: {
+    updateValues (values) {
+      this.fecha = values.fecha
+      this.hora = values.hora
+      this.notas = values.notas
+    },
     findDepartamento (name) {
-      return departments.find(departamento => departamento.name === name)
+      return this.departments.find(departamento => departamento.name === name)
+    },
+    async cita () {
+      const departamentoId = localStorage.getItem('department_id')
+
+      const cita = {
+        fecha: this.fecha,
+        hora: this.hora,
+        descripcion: this.notas,
+        students: { id: 1 },
+        tutores: { id: 1 },
+        departamentos: { id: departamentoId }
+      }
+
+      try {
+        const response = await axios.post('http://localhost:8081/citas', cita)
+        console.log(response.data)
+      } catch (error) {
+        console.error('There was an error!', error.message)
+      }
     }
   }
 }

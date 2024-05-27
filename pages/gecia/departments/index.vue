@@ -133,7 +133,12 @@ export default {
   },
   methods: {
     findDepartamento (name, departments) {
-      return departments.find(departamento => departamento.name === name)
+      const departamento = departments.find(departamento => departamento.name === name)
+      if (departamento) {
+        // Guarda el ID del departamento en localStorage
+        localStorage.setItem('department_id', departamento.id)
+      }
+      return departamento
     },
     cita () {
       this.$router.push({ name: 'gecia-date' })

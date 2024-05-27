@@ -45,17 +45,19 @@
             outlined
             required
             :rules="[required]"
+            @change="emitUpdate"
           />
         </v-row>
 
         <v-row class="ma-0 pa-0">
           <v-text-field
-            v-model="note"
+            v-model="notas"
             type="text"
             rounded
             clearable
             label="Nota"
             outlined
+            @input="emitUpdate"
           />
         </v-row>
       </v-col>
@@ -64,6 +66,8 @@
 </template>
 
 <script>
+import moment from 'moment'
+
 export default {
   name: 'SignUp',
   layout: 'ui-login-signup',
@@ -71,7 +75,7 @@ export default {
     return {
       date: false,
       schedule: null,
-      note: null,
+      notas: null,
       showAlert: false,
       alertText: '',
       alertColor: '',
@@ -85,6 +89,17 @@ export default {
   methods: {
     closeDatePicker () {
       this.date = false
+      this.emitUpdate()
+    },
+    emitUpdate () {
+      const formattedDate = moment(this.dates).format('YYYY-MM-DD')
+      const formattedTime = moment(this.schedule, 'h:mm a').format('HH:mm:ss')
+
+      this.$emit('update', {
+        fecha: formattedDate,
+        hora: formattedTime,
+        notas: this.notas
+      })
     }
   }
 }
