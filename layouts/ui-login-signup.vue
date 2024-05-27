@@ -2,12 +2,12 @@
   <div>
     <v-app-bar height="80" color="#00468C">
       <v-col class="d-flex justify-center align-center" justify="center">
-        <img src="../assets/logo_2.png" height="60" cover>
+        <img src="../assets/logo_2.png" height="65" cover>
       </v-col>
 
-      <v-spacer />
+          <v-spacer />
 
-      <v-col cols="5" sm="4" md="3" lg="2">
+      <v-col class="col-xss-5 col-xs-5 col-m-3 col-lg-3 col-2">
         <v-row>
           <router-link v-for="opcion in opciones" :key="opcion.title" :to="opcion.path" style="text-decoration: none;">
             <v-col style="color: white !important; font-size: 20px;">
@@ -18,8 +18,10 @@
       </v-col>
     </v-app-bar>
 
-    <Nuxt />
-  </div>
+        <Nuxt />
+      </v-sheet>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
