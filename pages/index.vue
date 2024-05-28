@@ -1,4 +1,4 @@
-  <!-- eslint-disable vue/max-attributes-per-line -->
+   <!-- eslint-disable vue/max-attributes-per-line -->
 <template>
   <v-app>
     <v-main>
@@ -92,7 +92,7 @@ export default {
             setTimeout(() => {
               this.showAlert = false
 
-              this.$router.push('/signup')
+              this.$router.push('/gecia')
             }, 3000)
           }
         } catch (err) {
