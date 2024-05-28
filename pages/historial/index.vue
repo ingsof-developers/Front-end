@@ -7,11 +7,6 @@
         </p>
       </v-row>
 
-      <!-- Mostrar mensaje de bienvenida al departamento -->
-      <v-row class="ma-0 pa-0 mt-5" justify="center" align="center">
-        <p v-if="!departamento_data.length" style="font-size: 20px;">{{ mensajeDepartamento }}</p>
-      </v-row>
-
       <ui-calendar />
     </v-container>
   </v-app>
