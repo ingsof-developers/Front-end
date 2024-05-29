@@ -4,12 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _49373f70 = () => interopDefault(import('..\\pages\\cita\\index.vue' /* webpackChunkName: "pages/cita/index" */))
-const _2088c3f7 = () => interopDefault(import('..\\pages\\departamento\\index.vue' /* webpackChunkName: "pages/departamento/index" */))
-const _7de5dc2c = () => interopDefault(import('..\\pages\\historial\\index.vue' /* webpackChunkName: "pages/historial/index" */))
-const _fddcd588 = () => interopDefault(import('..\\pages\\home\\index.vue' /* webpackChunkName: "pages/home/index" */))
-const _768a8b23 = () => interopDefault(import('..\\pages\\signup\\index.vue' /* webpackChunkName: "pages/signup/index" */))
-const _be7bd08a = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _060fed12 = () => interopDefault(import('..\\pages\\cita\\index.vue' /* webpackChunkName: "pages/cita/index" */))
+const _4a30327e = () => interopDefault(import('..\\pages\\departamento\\index.vue' /* webpackChunkName: "pages/departamento/index" */))
+const _6f281940 = () => interopDefault(import('..\\pages\\historial\\index.vue' /* webpackChunkName: "pages/historial/index" */))
+const _a885bbf4 = () => interopDefault(import('..\\pages\\home\\index.vue' /* webpackChunkName: "pages/home/index" */))
+const _b6f3e526 = () => interopDefault(import('..\\pages\\signup\\index.vue' /* webpackChunkName: "pages/signup/index" */))
+const _39bcf7f6 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -24,27 +24,27 @@ export const routerOptions = {
 
   routes: [{
     path: "/cita",
-    component: _49373f70,
+    component: _060fed12,
     name: "cita"
   }, {
     path: "/departamento",
-    component: _2088c3f7,
+    component: _4a30327e,
     name: "departamento"
   }, {
     path: "/historial",
-    component: _7de5dc2c,
+    component: _6f281940,
     name: "historial"
   }, {
     path: "/home",
-    component: _fddcd588,
+    component: _a885bbf4,
     name: "home"
   }, {
     path: "/signup",
-    component: _768a8b23,
+    component: _b6f3e526,
     name: "signup"
   }, {
     path: "/",
-    component: _be7bd08a,
+    component: _39bcf7f6,
     name: "index"
   }],
 

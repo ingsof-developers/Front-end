@@ -2,37 +2,43 @@
   {
     "name": "cita",
     "path": "/cita",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\cita\\\\index.vue",
-    "chunkName": "pages/cita/index"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\uno\\\\Front-end\\\\pages\\\\cita\\\\index.vue",
+    "chunkName": "pages/cita/index",
+    "_name": "_060fed12"
   },
   {
     "name": "departamento",
     "path": "/departamento",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\departamento\\\\index.vue",
-    "chunkName": "pages/departamento/index"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\uno\\\\Front-end\\\\pages\\\\departamento\\\\index.vue",
+    "chunkName": "pages/departamento/index",
+    "_name": "_4a30327e"
   },
   {
     "name": "historial",
     "path": "/historial",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\historial\\\\index.vue",
-    "chunkName": "pages/historial/index"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\uno\\\\Front-end\\\\pages\\\\historial\\\\index.vue",
+    "chunkName": "pages/historial/index",
+    "_name": "_6f281940"
   },
   {
     "name": "home",
     "path": "/home",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\home\\\\index.vue",
-    "chunkName": "pages/home/index"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\uno\\\\Front-end\\\\pages\\\\home\\\\index.vue",
+    "chunkName": "pages/home/index",
+    "_name": "_a885bbf4"
   },
   {
     "name": "signup",
     "path": "/signup",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
-    "chunkName": "pages/signup/index"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\uno\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
+    "chunkName": "pages/signup/index",
+    "_name": "_b6f3e526"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\prueba1\\\\Front-end\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\uno\\\\Front-end\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_39bcf7f6"
   }
 ]
