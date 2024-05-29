@@ -29,14 +29,14 @@
         </v-col>
       </v-app-bar>
 
-      <v-sheet width="100%" color="#fcfdff" class="d-flex flex-column pa-10">
+      <v-sheet width="100%" color="#fcfdff" class="d-flex flex-column pa-10" align="center">
         <v-row class="ma-0 pa-0 mt-10" justify="center" align="center">
           <p style="font-size: 50px; font-weight: 600;" justify="center" align="center">
             Agenda de citas
           </p>
         </v-row>
 
-        <ui-calendar class="ma-0 pa-0 mt-5" />
+        <ui-calendar class="ma-0 pa-0 mt-5" :citas-pasadas="departamento_data" />
       </v-sheet>
     </v-main>
   </v-app>
@@ -57,13 +57,13 @@ export default {
   },
   computed: {
     pops () {
-      return this.$store.state.pops
+      return this.$store.state.gecid_pops
     },
     opciones () {
-      return this.$store.state.opciones
+      return this.$store.state.gecid_opciones
     },
     profile () {
-      return this.$store.state.profile
+      return this.$store.state.gecid_profile
     }
   },
   mounted () {
@@ -72,11 +72,13 @@ export default {
   methods: {
     getDepartamentoData () {
       this.departamento_data = [
-        { departamentoName: 'Tutoría', fecha: '2024-05-01' },
-        { departamentoName: 'Activación física', fecha: '2024-04-25' },
-        { departamentoName: 'Nutrición', fecha: '2024-03-10' },
-        { departamentoName: 'Nutrición', fecha: '2024-03-10' },
-        { departamentoName: 'Nutrición', fecha: '2024-03-10' }
+        { departamentoName: 'Tutoría', fecha: '2024-05-01', hora: '11:00' },
+        { departamentoName: 'Activación física', fecha: '2024-04-26', hora: '12:00' },
+        { departamentoName: 'Activación física', fecha: '2024-04-26', hora: '13:00' },
+        { departamentoName: 'Activación física', fecha: '2024-04-25', hora: '16:00' },
+        { departamentoName: 'Activación', fecha: '2024-02-10', hora: '08:00' },
+        { departamentoName: 'Nutrición', fecha: '2024-03-10', hora: '10:00' },
+        { departamentoName: 'Nutrición', fecha: '2024-03-11', hora: '14:00' }
       ]
     }
   }

@@ -75,13 +75,13 @@ export default {
   },
   computed: {
     pops () {
-      return this.$store.state.pops
+      return this.$store.state.gecid_pops
     },
     opciones () {
-      return this.$store.state.opciones
+      return this.$store.state.gecid_opciones
     },
     profile () {
-      return this.$store.state.profile
+      return this.$store.state.gecid_profile
     }
   }
 }

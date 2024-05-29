@@ -29,27 +29,26 @@
         </v-col>
       </v-app-bar>
 
-      <v-sheet width="100%" color="#fcfdff" class="d-flex flex-column pa-10">
+      <v-sheet width="100%" color="#fcfdff" class="d-flex flex-column pa-10" align="center">
         <v-row class="ma-0 pa-0 mt-10" justify="center" align="center">
           <p style="font-size: 50px; font-weight: 600;" justify="center" align="center">
             Agenda de citas
           </p>
         </v-row>
 
-        <ui-calendar class="ma-0 pa-0 mt-5" />
+        <ui-calendar class="ma-0 pa-0" :citas-pasadas="departamento_data" />
       </v-sheet>
     </v-main>
   </v-app>
 </template>
 
 <script>
+import departments from '@/assets/departments.json'
 
 export default {
-  name: 'GeciaDate',
   data () {
     return {
-      departamento_data: null,
-      departamentoName: '',
+      departamento_data: [],
       departamentos: [],
       mensajeDepartamento: 'No hay citas pasadas.',
       showAllCitas: true
@@ -67,6 +66,7 @@ export default {
     }
   },
   mounted () {
+    this.departamentos = departments
     this.getDepartamentoData()
   },
   methods: {
@@ -74,8 +74,6 @@ export default {
       this.departamento_data = [
         { departamentoName: 'Tutoría', fecha: '2024-05-01' },
         { departamentoName: 'Activación física', fecha: '2024-04-25' },
-        { departamentoName: 'Nutrición', fecha: '2024-03-10' },
-        { departamentoName: 'Nutrición', fecha: '2024-03-10' },
         { departamentoName: 'Nutrición', fecha: '2024-03-10' }
       ]
     }

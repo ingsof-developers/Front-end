@@ -25,10 +25,6 @@
 
 .v-menu__content
 {
-<<<<<<< HEAD
   top: 80px !important;
-=======
-  top: 0px !important;
->>>>>>> eec6da2 (Diseño de componente pop-up de mensajes y notificaciones)
   background-color: white !important;
 }

@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <v-main>
-      <<<<<<< HEAD:pages/gecia/index.vue
       <v-app-bar height="80" color="#00468C">
         <v-col class="d-flex">
           <router-link to="/gecia" class="ma-0 pa-0">
@@ -31,9 +30,7 @@
       </v-app-bar>
 
       <v-sheet width="100%" color="#fcfdff" class="d-flex flex-column pa-10">
-        =======
         <v-sheet height="100%" width="100%" color="#fcfdff" class="d-flex flex-column pa-10">
-          >>>>>>> eec6da2 (Diseño de componente pop-up de mensajes y notificaciones):pages/home/index.vue
           <v-col class="pa-0 ma-0">
             <v-row align="center" justify="center">
               <v-col
@@ -99,7 +96,7 @@
 import departments from '@/assets/departments.json'
 
 export default {
-  name: 'GeciaProfile',
+  name: 'Gecia',
   data () {
     return {
       departamentos: []

@@ -69,8 +69,6 @@
 import moment from 'moment'
 
 export default {
-  name: 'SignUp',
-  layout: 'ui-login-signup',
   data () {
     return {
       date: false,
