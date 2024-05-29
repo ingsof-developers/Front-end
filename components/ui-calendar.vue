@@ -9,7 +9,18 @@
       <span class="month-title">{{ getCurrentMonth() }}</span> <!-- Mostrar el nombre del mes -->
       <v-spacer />
     </v-sheet>
-    <v-sheet height="600">
+    <v-sheet height="600" class="calendar-container">
+      <div class="calendar-btns">
+        <v-btn icon @click="prev" class="calendar-btn">
+          <v-icon size="24">mdi-chevron-left</v-icon>
+        </v-btn>
+        <v-btn @click="changeView('month')" class="calendar-btn">Mes</v-btn>
+        <v-btn @click="changeView('week')" class="calendar-btn">Semana</v-btn>
+        <v-btn @click="changeView('day')" class="calendar-btn">Día</v-btn>
+        <v-btn icon @click="next" class="calendar-btn">
+          <v-icon size="24">mdi-chevron-right</v-icon>
+        </v-btn>
+      </div>
       <v-calendar
         ref="calendar"
         v-model="value"
@@ -20,6 +31,7 @@
         :event-color="getEventColor"
         @change="getEvents"
         @click:date="showDialog"
+        class="calendar"
       />
     </v-sheet>
     <!-- Diálogo -->
@@ -90,6 +102,27 @@ export default {
       console.log('Fecha clickeada:', date)
       this.dialog = true
     },
+    changeView (view) {
+      this.type = view
+    },
+    prev () {
+      if (this.type === 'month') {
+        this.value = new Date(this.value).setMonth(new Date(this.value).getMonth() - 1)
+      } else if (this.type === 'week') {
+        this.value = new Date(this.value).setDate(new Date(this.value).getDate() - 7)
+      } else if (this.type === 'day') {
+        this.value = new Date(this.value).setDate(new Date(this.value).getDate() - 1)
+      }
+    },
+    next () {
+      if (this.type === 'month') {
+        this.value = new Date(this.value).setMonth(new Date(this.value).getMonth() + 1)
+      } else if (this.type === 'week') {
+        this.value = new Date(this.value).setDate(new Date(this.value).getDate() + 7)
+      } else if (this.type === 'day') {
+        this.value = new Date(this.value).setDate(new Date(this.value).getDate() + 1)
+      }
+    },
     rnd (a, b) {
       return Math.floor((b - a + 1) * Math.random()) + a
     }
@@ -103,7 +136,26 @@ export default {
   font-weight: bold; /* Peso de la fuente */
 }
 
-.dialog-message {
-  font-size: 20px; /* Tamaño de fuente más grande para el mensaje en el diálogo */
+.calendar-btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.calendar-btn {
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  color: #4CAF50; /* Color del texto */
+  padding: 0; /* Sin relleno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 24px; /* Tamaño de fuente */
+  margin: 0 10px; /* Margen exterior */
+  cursor: pointer; /* Cursor al pasar por encima */
+  transition: background-color 0.3s ease; /* Transición para el cambio de color de fondo */
+}
+
+.calendar-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente oscurecido al pasar el mouse */
 }
 </style>
