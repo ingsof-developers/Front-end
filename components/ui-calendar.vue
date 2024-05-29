@@ -6,19 +6,29 @@
       class="d-flex"
     >
       <v-spacer />
-      <span class="month-title">{{ getCurrentMonth() }}</span> <!-- Mostrar el nombre del mes -->
+      <span class="month-title">{{ getCurrentMonth() }}</span>
       <v-spacer />
     </v-sheet>
     <v-sheet height="600" class="calendar-container">
       <div class="calendar-btns">
-        <v-btn icon @click="prev" class="calendar-btn">
-          <v-icon size="24">mdi-chevron-left</v-icon>
+        <v-btn icon class="calendar-btn" @click="prev">
+          <v-icon size="24">
+            mdi-chevron-left
+          </v-icon>
         </v-btn>
-        <v-btn @click="changeView('month')" class="calendar-btn">Mes</v-btn>
-        <v-btn @click="changeView('week')" class="calendar-btn">Semana</v-btn>
-        <v-btn @click="changeView('day')" class="calendar-btn">Día</v-btn>
-        <v-btn icon @click="next" class="calendar-btn">
-          <v-icon size="24">mdi-chevron-right</v-icon>
+        <v-btn class="calendar-btn" @click="changeView('month')">
+          Mes
+        </v-btn>
+        <v-btn class="calendar-btn" @click="changeView('week')">
+          Semana
+        </v-btn>
+        <v-btn class="calendar-btn" @click="changeView('day')">
+          Día
+        </v-btn>
+        <v-btn icon class="calendar-btn" @click="next">
+          <v-icon size="24">
+            mdi-chevron-right
+          </v-icon>
         </v-btn>
       </div>
       <v-calendar
@@ -28,21 +38,24 @@
         :types="types"
         :event-overlap-mode="mode"
         :event-overlap-threshold="30"
-        :event-color="getEventColor"
-        @change="getEvents"
-        @click:date="showDialog"
         class="calendar"
+        @click:date="showDialog"
       />
     </v-sheet>
-    <!-- Diálogo -->
     <v-dialog v-model="dialog" max-width="400">
       <v-card>
-        <v-card-title class="dialog-title">Diálogo de Prueba</v-card-title>
+        <v-card-title class="dialog-title">
+          Citas
+        </v-card-title>
         <v-card-text>
-          <p class="dialog-message">Hola</p>
+          <p class="dialog-message">
+            {{ dialogMessage }}
+          </p>
         </v-card-text>
         <v-card-actions>
-          <v-btn color="primary" @click="dialog = false">Cerrar</v-btn>
+          <v-btn color="primary" @click="dialog = false">
+            Cerrar
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -51,18 +64,27 @@
 
 <script>
 export default {
-  data: () => ({
-    type: 'month',
-    types: ['month', 'week', 'day'],
-    mode: 'stack',
-    modes: ['stack', 'column'],
-    weekday: [0, 1, 2, 3, 4, 5, 6],
-    value: new Date().toISOString().substr(0, 10), // Inicializar con la fecha actual en formato ISO
-    events: [],
-    colors: ['blue'],
-    names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party'],
-    dialog: false // Agregar esta línea para el estado del diálogo
-  }),
+  props: {
+    citasPasadas: {
+      type: Array,
+      default: () => []
+    }
+  },
+  data () {
+    return {
+      type: 'month',
+      types: ['month', 'week', 'day'],
+      mode: 'stack',
+      modes: ['stack', 'column'],
+      weekday: [0, 1, 2, 3, 4, 5, 6],
+      value: new Date().toISOString().substr(0, 10),
+      events: [],
+      colors: ['#F7F7F7'],
+      names: ['Cita'],
+      dialog: false,
+      dialogMessage: ''
+    }
+  },
   methods: {
     getEvents ({ start, end }) {
       const events = []
@@ -96,11 +118,27 @@ export default {
     getCurrentMonth () {
       const currentDate = new Date(this.value)
       const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
-      return months[currentDate.getMonth()] // Obtener el nombre del mes actual
+      return months[currentDate.getMonth()]
     },
-    showDialog (date) {
-      console.log('Fecha clickeada:', date)
-      this.dialog = true
+    showDialog (clickedDate) {
+      console.log('Fecha clickeada:', clickedDate)
+
+      if (clickedDate && clickedDate.date) {
+        const formattedDate = clickedDate.date
+        console.log('Fecha formateada:', formattedDate)
+
+        const cita = this.citasPasadas.find(cita => cita.fecha === formattedDate)
+        if (cita !== undefined) {
+          console.log('Cita encontrada:', cita)
+          this.dialogMessage = `Cita en ${cita.departamentoName} el ${formattedDate}`
+        } else {
+          console.log('No hay cita para esta fecha.')
+          this.dialogMessage = 'No hay cita para esta fecha.'
+        }
+        this.dialog = true
+      } else {
+        console.error('Fecha no válida:', clickedDate)
+      }
     },
     changeView (view) {
       this.type = view
@@ -132,8 +170,8 @@ export default {
 
 <style>
 .month-title {
-  font-size: 24px; /* Tamaño de fuente */
-  font-weight: bold; /* Peso de la fuente */
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .calendar-btns {
@@ -143,19 +181,19 @@ export default {
 }
 
 .calendar-btn {
-  background-color: transparent; /* Fondo transparente */
-  border: none; /* Sin borde */
-  color: #4CAF50; /* Color del texto */
-  padding: 0; /* Sin relleno */
-  text-align: center; /* Alineación del texto */
-  text-decoration: none; /* Sin subrayado */
-  font-size: 24px; /* Tamaño de fuente */
-  margin: 0 10px; /* Margen exterior */
-  cursor: pointer; /* Cursor al pasar por encima */
-  transition: background-color 0.3s ease; /* Transición para el cambio de color de fondo */
+  background-color: transparent;
+  border: none;
+  color: #4CAF50;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .calendar-btn:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente oscurecido al pasar el mouse */
+  background-color: rgba(0, 0, 0, 0.1);
 }
 </style>
