@@ -26,7 +26,7 @@ export const state = () => ({
     }
   ],
   opciones: [
-    { icon: 'mdi-notebook', path: '/gecia/date' },
+    { icon: 'mdi-notebook', path: '/gecia/datebook' },
     { icon: 'mdi-history', path: '/gecia/history' }
   ],
   profile: {
@@ -58,7 +58,7 @@ export const state = () => ({
     }
   ],
   gecid_opciones: [
-    { icon: 'mdi-notebook', path: '/gecid/date' },
+    { icon: 'mdi-notebook', path: '/gecid/datebook' },
     { icon: 'mdi-history', path: '/gecid/history' }
   ],
   gecid_profile: {

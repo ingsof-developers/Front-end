@@ -3,7 +3,7 @@
     <v-main>
       <v-app-bar height="80" color="#00468C">
         <v-col class="d-flex">
-          <router-link to="/gecid" class="ma-0 pa-0">
+          <router-link to="/gecia" class="ma-0 pa-0">
             <img src="@/assets/logo_2.png" height="60" cover class="ma-0 pa-0 ml-1">
           </router-link>
         </v-col>
@@ -32,24 +32,23 @@
       <v-sheet width="100%" color="#fcfdff" class="d-flex flex-column pa-10" align="center">
         <v-row class="ma-0 pa-0 mt-10" justify="center" align="center">
           <p style="font-size: 50px; font-weight: 600;" justify="center" align="center">
-            Historial de citas
+            Agenda de citas
           </p>
         </v-row>
 
-        <ui-calendar class="ma-0 pa-0 mt-5" :citas-pasadas="departamento_data" />
+        <ui-calendar class="ma-0 pa-0" :citas-pasadas="departamento_data" />
       </v-sheet>
     </v-main>
   </v-app>
 </template>
 
 <script>
+import departments from '@/assets/departments.json'
 
 export default {
-  name: 'GeciaDate',
   data () {
     return {
-      departamento_data: null,
-      departamentoName: '',
+      departamento_data: [],
       departamentos: [],
       mensajeDepartamento: 'No hay citas pasadas.',
       showAllCitas: true
@@ -57,16 +56,17 @@ export default {
   },
   computed: {
     pops () {
-      return this.$store.state.gecid_pops
+      return this.$store.state.pops
     },
     opciones () {
-      return this.$store.state.gecid_opciones
+      return this.$store.state.opciones
     },
     profile () {
-      return this.$store.state.gecid_profile
+      return this.$store.state.profile
     }
   },
   mounted () {
+    this.departamentos = departments
     this.getDepartamentoData()
   },
   methods: {

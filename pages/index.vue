@@ -87,8 +87,6 @@ export default {
             this.alertColor = '#6CDACE'
             this.alertType = 'success'
 
-            this.showNuevo = false
-
             setTimeout(() => {
               this.showAlert = false
 

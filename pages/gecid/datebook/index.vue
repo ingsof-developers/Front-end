@@ -3,7 +3,7 @@
     <v-main>
       <v-app-bar height="80" color="#00468C">
         <v-col class="d-flex">
-          <router-link to="/gecia" class="ma-0 pa-0">
+          <router-link to="/gecid" class="ma-0 pa-0">
             <img src="@/assets/logo_2.png" height="60" cover class="ma-0 pa-0 ml-1">
           </router-link>
         </v-col>
