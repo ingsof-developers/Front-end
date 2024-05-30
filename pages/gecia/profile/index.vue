@@ -67,7 +67,7 @@
 <script>
 
 export default {
-  name: 'Home',
+  name: 'Profile',
   data () {
     return {
       //
@@ -75,13 +75,13 @@ export default {
   },
   computed: {
     pops () {
-      return this.$store.state.gecid_pops
+      return this.$store.state.pops
     },
     opciones () {
-      return this.$store.state.gecid_opciones
+      return this.$store.state.opciones
     },
     profile () {
-      return this.$store.state.gecid_profile
+      return this.$store.state.profile
     }
   }
 }

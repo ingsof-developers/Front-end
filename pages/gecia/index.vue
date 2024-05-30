@@ -29,7 +29,7 @@
         </v-col>
       </v-app-bar>
 
-      <v-sheet width="100%" color="#fcfdff" class="d-flex flex-column pa-10">
+      <v-sheet height="100%" width="100%" color="#fcfdff" class="d-flex flex-column pa-10">
         <v-col class="pa-0 ma-0">
           <v-row align="center" justify="center">
             <v-col
@@ -94,7 +94,7 @@
 import axios from 'axios'
 
 export default {
-  name: 'GeciaProfile',
+  name: 'Gecia',
   data () {
     return {
       departamentos: []

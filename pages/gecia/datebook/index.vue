@@ -32,7 +32,7 @@
       <v-sheet width="100%" color="#fcfdff" class="d-flex flex-column pa-10" align="center">
         <v-row class="ma-0 pa-0 mt-10" justify="center" align="center">
           <p style="font-size: 50px; font-weight: 600;" justify="center" align="center">
-            Historial de citas
+            Agenda de citas
           </p>
         </v-row>
 

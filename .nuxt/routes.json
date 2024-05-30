@@ -2,64 +2,85 @@
   {
     "name": "gecia",
     "path": "/gecia",
-    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\index.vue",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/gecia/index.vue",
     "chunkName": "pages/gecia/index",
-    "_name": "_6b19072a"
+    "_name": "_e9be9116"
   },
   {
     "name": "gecid",
     "path": "/gecid",
-    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecid\\\\index.vue",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/gecid/index.vue",
     "chunkName": "pages/gecid/index",
-    "_name": "_3cef26f0"
+    "_name": "_49cecfb8"
   },
   {
     "name": "signup",
     "path": "/signup",
-    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/signup/index.vue",
     "chunkName": "pages/signup/index",
-    "_name": "_4f7495d4"
+    "_name": "_2ab6cf54"
   },
   {
     "name": "gecia-date",
     "path": "/gecia/date",
-    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\date\\\\index.vue",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/gecia/date/index.vue",
     "chunkName": "pages/gecia/date/index",
-    "_name": "_19119886"
+    "_name": "_33b16f1e"
+  },
+  {
+    "name": "gecia-datebook",
+    "path": "/gecia/datebook",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/gecia/datebook/index.vue",
+    "chunkName": "pages/gecia/datebook/index",
+    "_name": "_a0a7bd72"
   },
   {
     "name": "gecia-departments",
     "path": "/gecia/departments",
-    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\departments\\\\index.vue",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/gecia/departments/index.vue",
     "chunkName": "pages/gecia/departments/index",
-    "_name": "_257a4ef0"
+    "_name": "_b9b93472"
   },
   {
     "name": "gecia-history",
     "path": "/gecia/history",
-    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\history\\\\index.vue",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/gecia/history/index.vue",
     "chunkName": "pages/gecia/history/index",
-    "_name": "_47e794f5"
+    "_name": "_65db068c"
   },
   {
     "name": "gecia-profile",
     "path": "/gecia/profile",
-    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\profile\\\\index.vue",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/gecia/profile/index.vue",
     "chunkName": "pages/gecia/profile/index",
-    "_name": "_560260c0"
+    "_name": "_17d98b8f"
+  },
+  {
+    "name": "gecid-datebook",
+    "path": "/gecid/datebook",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/gecid/datebook/index.vue",
+    "chunkName": "pages/gecid/datebook/index",
+    "_name": "_6691a464"
+  },
+  {
+    "name": "gecid-history",
+    "path": "/gecid/history",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/gecid/history/index.vue",
+    "chunkName": "pages/gecid/history/index",
+    "_name": "_3611a1fd"
   },
   {
     "name": "gecid-profile",
     "path": "/gecid/profile",
-    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecid\\\\profile\\\\index.vue",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/gecid/profile/index.vue",
     "chunkName": "pages/gecid/profile/index",
-    "_name": "_7bcd4143"
+    "_name": "_fe4e9e5c"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\index.vue",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_3dd6636c"
+    "_name": "_5cea94b2"
   }
 ]

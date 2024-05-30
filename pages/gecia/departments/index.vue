@@ -135,7 +135,6 @@ export default {
     findDepartamento (name, departments) {
       const departamento = departments.find(departamento => departamento.name === name)
       if (departamento) {
-        // Guarda el ID del departamento en localStorage
         localStorage.setItem('department_id', departamento.id)
       }
       return departamento

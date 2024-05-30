@@ -46,6 +46,8 @@
           </v-row>
         </div>
       </v-sheet>
+
+      <ui-alert v-if="showAlert" :text="alertText" :color="alertColor" :type="alertType" />
     </v-main>
   </v-app>
 </template>
@@ -62,7 +64,11 @@ export default {
       departments: [],
       fecha: null,
       hora: null,
-      notas: null
+      notas: null,
+      showAlert: false,
+      alertText: '',
+      alertColor: '',
+      alertType: ''
     }
   },
   computed: {
@@ -117,9 +123,32 @@ export default {
 
       try {
         const response = await axios.post('http://localhost:8081/citas', cita)
+
         console.log(response.data)
+
+        if (response.data) {
+          this.showAlert = true
+          this.alertText = response.data.message
+          this.alertColor = '#6CDACE'
+          this.alertType = 'success'
+
+          setTimeout(() => {
+            this.showAlert = false
+
+            this.$router.push('/gecia')
+          }, 3000)
+        }
       } catch (error) {
         console.error('There was an error!', error.message)
+
+        this.showAlert = true
+        this.alertText = error.message
+        this.alertColor = '#FF9F8E'
+        this.alertType = 'warning'
+
+        setTimeout(() => {
+          this.showAlert = false
+        }, 3000)
       }
     }
   }
