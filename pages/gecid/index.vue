@@ -57,11 +57,17 @@
               </v-row>
             </v-col>
           </v-row>
-
           <v-divider class="mt-10 mb-15" />
         </v-col>
       </v-sheet>
     </v-main>
+    <v-row align="center" justify="center">
+      <div style="max-width: 900px; text-align: justify;">
+        <p style="font-size: 24px; line-height: 1.6;">
+          ¡Bienvenido a nuestra plataforma en línea! Estamos encantados de tenerte aquí. En este espacio dedicado, podrás gestionar fácilmente las citas de estudiantes en diversos departamentos de la Universidad de Guanajuato, desde la asesoría académica hasta la orientación profesional. Desde la comodidad de tu hogar, podrás aprovechar al máximo nuestras soluciones, optimizando así tu tiempo y facilitando tu experiencia universitaria. ¡Esperamos que encuentres todo lo que necesitas para una gestión eficiente y exitosa!
+        </p>
+      </div>
+    </v-row>
   </v-app>
 </template>
 

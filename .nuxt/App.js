@@ -6,14 +6,14 @@ import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '../css/index.css'
+import '..\\css\\index.css'
 
-import '../node_modules/vuetify/dist/vuetify.css'
+import '..\\node_modules\\vuetify\\dist\\vuetify.css'
 
-import _52aa0ecc from '../layouts/ui-gecia.vue'
-import _52aa0ec6 from '../layouts/ui-gecid.vue'
-import _132d907c from '../layouts/ui-home.vue'
-import _06a5b842 from '../layouts/ui-login-signup.vue'
+import _52aa0ecc from '..\\layouts\\ui-gecia.vue'
+import _52aa0ec6 from '..\\layouts\\ui-gecid.vue'
+import _132d907c from '..\\layouts\\ui-home.vue'
+import _06a5b842 from '..\\layouts\\ui-login-signup.vue'
 import _6f6c098b from './layouts/default.vue'
 
 const layouts = { "_ui-gecia": sanitizeComponent(_52aa0ecc),"_ui-gecid": sanitizeComponent(_52aa0ec6),"_ui-home": sanitizeComponent(_132d907c),"_ui-login-signup": sanitizeComponent(_06a5b842),"_default": sanitizeComponent(_6f6c098b) }
