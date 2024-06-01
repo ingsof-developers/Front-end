@@ -7,7 +7,9 @@ import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '..\\css\\index.css'
+import '..\\css\\index.css'
 
+import '..\\node_modules\\vuetify\\dist\\vuetify.css'
 import '..\\node_modules\\vuetify\\dist\\vuetify.css'
 
 import _52aa0ecc from '..\\layouts\\ui-gecia.vue'
