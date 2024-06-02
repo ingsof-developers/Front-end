@@ -23,8 +23,78 @@
   border-bottom: 1px solid #e0e0e0;
 }
 
-.v-menu__content
+.month-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.calendar-btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.calendar-btn {
+  background-color: #0053a5dc !important;
+  color: white !important;
+  text-align: center;
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.v-btn:before {
+  background-color: #0053a5dc !important;
+}
+
+.calendar {
+  min-height: 400px !important;
+  width: 90% !important;
+}
+
+.v-calendar-weekly__head-weekday, .v-past .v-outside, .v-calendar-daily_head-weekday {
+  height: 40px !important;
+  border-bottom: 0.5px grey solid;
+  align-content: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.v-calendar-weekly__head-weekday, .v-calendar-daily_head-weekday {
+  background-color: #0053a5dc !important;
+  color: white !important;
+  font-size: 20px !important;
+}
+
+.v-calendar-weekly__day, .v-past {
+  align-content: center !important;
+  align-items: center !important;
+}
+
+.v-calendar-weekly__day-label span {
+  font-size: 15px !important;
+}
+
+.v-event-summary, .v-event-summary strong
 {
-  top: 80px !important;
-  background-color: white !important;
+  color: white !important;
+}
+
+.dialog {
+  border-radius: 50px !important;
+}
+
+.dialog-title {
+  font-size: 35px !important;
+}
+
+.dialog-message {
+  font-size: 22px !important;
+}
+
+.dialog-btn-text {
+  font-size: 22px !important;
+  color: white !important;
+  text-transform: capitalize !important;
 }

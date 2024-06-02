@@ -38,12 +38,23 @@
         :event-overlap-threshold="30"
         :event-color="getEventColor"
         class="ma-0 pa-0 mt-10 calendar"
-        @click:date="showDialog"
+        @click:event="showDialog"
       />
     </v-sheet>
 
-    <v-dialog v-model="dialog" class="ma-0 pa-0" min-width="400" max-width="30%" content-class="dialog">
+    <v-dialog v-model="dialog" class="ma-0 pa-0" min-width="400px" max-width="30%" content-class="dialog">
       <v-card class="ma-0 pa-10 py-12 align-center justify-center">
+        <v-row class="ma-0 pa-0" align="end" justify="end">
+          <span
+            class="ma-0 pa-0 mdi mdi-close"
+            rounded
+            color="transparent"
+            elevation="0"
+            style="cursor: pointer !important;"
+            @click="dialog = false"
+          />
+        </v-row>
+
         <v-card-title class="ma-0 pa-0 align-center justify-center">
           <p class="ma-0 pa-0 dialog-title">
             Citas
@@ -56,10 +67,131 @@
           </p>
         </v-card-text>
 
+        <v-card-actions class="ma-0 pa-0 mt-14 align-center justify-center">
+          <v-col class="ma-0 pa-0">
+            <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="updateDate ()">
+              <p class="ma-0 pa-0 dialog-btn-text">
+                Reprogramar Cita
+              </p>
+            </v-btn>
+          </v-col>
+
+          <v-spacer />
+
+          <v-col class="ma-0 pa-0">
+            <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="deleteDate ()">
+              <p class="ma-0 pa-0 dialog-btn-text">
+                Cancelar Cita
+              </p>
+            </v-btn>
+          </v-col>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <v-dialog v-model="dialogCancel" class="ma-0 pa-0" min-width="400px" max-width="30%" content-class="dialog">
+      <v-card class="ma-0 pa-10 py-12 align-center justify-center" align="center" justify="center">
+        <v-row class="ma-0 pa-0" align="end" justify="end">
+          <span
+            class="ma-0 pa-0 mdi mdi-close"
+            rounded
+            color="transparent"
+            elevation="0"
+            style="cursor: pointer !important;"
+            @click="dialogCancel = false"
+          />
+        </v-row>
+
+        <v-card-title class="ma-0 pa-0 align-center align-center justify-center">
+          <p class="ma-0 pa-0 dialog-title" style="font-size: 22px;">
+            ¿Estás seguro de querer cancelar tu cita?
+          </p>
+        </v-card-title>
+
         <v-card-actions class="ma-0 pa-0 mt-10 align-center justify-center">
-          <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="dialog = false">
+          <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="deleteDateConfirmed ()">
             <p class="ma-0 pa-0 dialog-btn-text">
-              Cerrar
+              Cancelar Cita
+            </p>
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <v-dialog v-model="dialogUpdate" class="ma-0 pa-0" min-width="400px" max-width="30%" content-class="dialog">
+      <v-card class="ma-0 pa-10 py-12 align-center justify-center" align="center" justify="center">
+        <v-row class="ma-0 pa-0" align="end" justify="end">
+          <span
+            class="ma-0 pa-0 mdi mdi-close"
+            rounded
+            color="transparent"
+            elevation="0"
+            style="cursor: pointer !important;"
+            @click="dialogUpdate = false"
+          />
+        </v-row>
+
+        <v-card-title class="ma-0 pa-0 align-center align-center justify-center">
+          <p class="ma-0 pa-0 dialog-title" style="font-size: 22px;">
+            Reprogramar Cita
+          </p>
+        </v-card-title>
+
+        <v-card-text class="ma-0 pa-0 mt-15">
+          <v-form ref="updateForm" v-model="validUpdateForm">
+            <v-row class="ma-0 pa-0">
+              <v-menu
+                ref="date_update"
+                v-model="dates_update"
+                :close-on-content-click="false"
+                transition="scale-transition"
+                offset-y
+                min-width="auto"
+              >
+                <template #activator="{ on, attrs }">
+                  <v-text-field
+                    v-model="date_update"
+                    rounded
+                    label="Fecha"
+                    clearable
+                    style="border: 0.5px solid black !important; border-radius: 50px; height: 56px;"
+                    v-bind="attrs"
+                    readonly
+                    v-on="on"
+                    @click="dates_update = true"
+                  />
+                </template>
+
+                <v-date-picker
+                  v-model="date_update"
+                  no-title
+                  scrollable
+                  locale="es"
+                  header-color="#00468C"
+                  @input="closeDatePicker"
+                />
+              </v-menu>
+            </v-row>
+
+            <v-row class="ma-0 pa-0 mt-8">
+              <v-select
+                v-model="schedule_update"
+                :items="schedules_update"
+                rounded
+                label="Horario"
+                outlined
+                required
+                :rules="[required]"
+                @change="emitUpdate"
+              />
+            </v-row>
+          </v-form>
+        </v-card-text>
+
+        <v-card-actions class="ma-0 pa-0 mt-8 align-center justify-center">
+          <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="updateDateConfirmed ()">
+            <p class="ma-0 pa-0 dialog-btn-text">
+              Reprogramar
             </p>
           </v-btn>
         </v-card-actions>
@@ -69,6 +201,8 @@
 </template>
 
 <script>
+import moment from 'moment'
+
 export default {
   props: {
     citasPasadas: {
@@ -84,7 +218,16 @@ export default {
       dialog: false,
       dialogMessage: '',
       mode: 'stack',
-      departamento_data: []
+      departamento_data: [],
+      dialogCancel: false,
+      dialogUpdate: false,
+      validUpdateForm: false,
+      dates_update: false,
+      date_update: '',
+      schedule_update: null,
+      required: value => !!value || 'Required field',
+      password: value => (value && value.length > 5) || 'Password must be more than 5 chars',
+      schedules_update: ['8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 pm', '1:00 pm', '2:00 pm']
     }
   },
   watch: {
@@ -128,16 +271,18 @@ export default {
 
       return `${monthName} ${year}`
     },
-    showDialog (clickedDate) {
-      if (clickedDate && clickedDate.date) {
-        const formattedDate = clickedDate.date
+    showDialog (clickedEvent) {
+      const event = clickedEvent.event
 
-        const cita = this.citasPasadas.find(cita => cita.fecha === formattedDate)
+      if (event && event.start && event.name) {
+        const formattedDate = event.start.toISOString().substr(0, 10)
 
-        if (cita !== undefined) {
-          const formattedTime = cita.hora
+        const hours = event.start.getHours().toString().padStart(2, '0')
+        const minutes = event.start.getMinutes().toString().padStart(2, '0')
+        const formattedTime = `${hours}:${minutes}`
 
-          this.dialogMessage = `Cita en ${cita.departamentoName} el ${formattedDate} a las ${formattedTime}`
+        if (event !== undefined) {
+          this.dialogMessage = `Cita en ${event.name} el ${formattedDate} a las ${formattedTime} hrs`
         } else {
           this.dialogMessage = 'No hay cita para esta fecha.'
         }
@@ -166,84 +311,32 @@ export default {
       } else if (this.type === 'day') {
         this.value = new Date(current.setDate(current.getDate() + 1)).toISOString().substr(0, 10)
       }
+    },
+    deleteDate () {
+      this.dialogCancel = true
+    },
+    updateDate () {
+      this.dialogUpdate = true
+    },
+    deleteDateConfirmed () {
+      //
+    },
+    updateDateConfirmed () {
+      //
+    },
+    closeDatePicker () {
+      this.date = false
+      this.emitUpdate()
+    },
+    emitUpdate () {
+      const formattedDate = moment(this.dates).format('YYYY-MM-DD')
+      const formattedTime = moment(this.schedule, 'h:mm a').format('HH:mm:ss')
+
+      this.$emit('update', {
+        fecha: formattedDate,
+        hora: formattedTime
+      })
     }
   }
 }
 </script>
-
-<style>
-.month-title {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.calendar-btns {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.calendar-btn {
-  background-color: #0053a5dc !important;
-  color: white !important;
-  text-align: center;
-  font-size: 24px;
-  margin: 0 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.v-btn:before {
-  background-color: #0053a5dc !important;
-}
-
-.calendar {
-  min-height: 400px !important;
-  width: 90% !important;
-}
-
-.v-calendar-weekly__head-weekday, .v-past .v-outside, .v-calendar-daily_head-weekday {
-  height: 40px !important;
-  border-bottom: 0.5px grey solid;
-  align-content: center !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.v-calendar-weekly__head-weekday, .v-calendar-daily_head-weekday {
-  background-color: #0053a5dc !important;
-  color: white !important;
-  font-size: 20px !important;
-}
-
-.v-calendar-weekly__day, .v-past {
-  align-content: center !important;
-  align-items: center !important;
-}
-
-.v-calendar-weekly__day-label span {
-  font-size: 15px !important;
-}
-
-.v-event-summary, .v-event-summary strong
-{
-  color: white !important;
-}
-
-.dialog {
-  border-radius: 50px !important;
-}
-
-.dialog-title {
-  font-size: 35px !important;
-}
-
-.dialog-message {
-  font-size: 22px !important;
-}
-
-.dialog-btn-text {
-  font-size: 22px !important;
-  color: white !important;
-}
-</style>
