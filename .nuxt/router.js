@@ -4,9 +4,11 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _7b94c6c2 = () => interopDefault(import('../pages/geci/index.vue' /* webpackChunkName: "pages/geci/index" */))
 const _e9be9116 = () => interopDefault(import('../pages/gecia/index.vue' /* webpackChunkName: "pages/gecia/index" */))
 const _49cecfb8 = () => interopDefault(import('../pages/gecid/index.vue' /* webpackChunkName: "pages/gecid/index" */))
 const _2ab6cf54 = () => interopDefault(import('../pages/signup/index.vue' /* webpackChunkName: "pages/signup/index" */))
+const _abd5ba4a = () => interopDefault(import('../pages/geci/signup/index.vue' /* webpackChunkName: "pages/geci/signup/index" */))
 const _33b16f1e = () => interopDefault(import('../pages/gecia/date/index.vue' /* webpackChunkName: "pages/gecia/date/index" */))
 const _a0a7bd72 = () => interopDefault(import('../pages/gecia/datebook/index.vue' /* webpackChunkName: "pages/gecia/datebook/index" */))
 const _b9b93472 = () => interopDefault(import('../pages/gecia/departments/index.vue' /* webpackChunkName: "pages/gecia/departments/index" */))
@@ -29,6 +31,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/geci",
+    component: _7b94c6c2,
+    name: "geci"
+  }, {
     path: "/gecia",
     component: _e9be9116,
     name: "gecia"
@@ -40,6 +46,10 @@ export const routerOptions = {
     path: "/signup",
     component: _2ab6cf54,
     name: "signup"
+  }, {
+    path: "/geci/signup",
+    component: _abd5ba4a,
+    name: "geci-signup"
   }, {
     path: "/gecia/date",
     component: _33b16f1e,
