@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/max-attributes-per-line -->
 <template>
   <div class="ma-0 pa-0">
     <v-sheet tile height="54" class="ma-0 pa-0 d-flex">
@@ -42,7 +43,7 @@
       />
     </v-sheet>
 
-    <v-dialog v-model="dialog" class="ma-0 pa-0" min-width="500px" width="500px" content-class="dialog">
+    <v-dialog v-model="dialog" class="ma-0 pa-0" min-width="750px" width="750px" content-class="dialog">
       <v-card class="ma-0 pa-10 py-12 align-center justify-center">
         <v-row class="ma-0 pa-0" align="end" justify="end">
           <span
@@ -82,6 +83,16 @@
             <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="deleteDate ()">
               <p class="ma-0 pa-0 dialog-btn-text">
                 Cancelar Cita
+              </p>
+            </v-btn>
+          </v-col>
+
+          <v-spacer />
+
+          <v-col class="ma-0 pa-0">
+            <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="dateFinish ()">
+              <p class="ma-0 pa-0 dialog-btn-text">
+                Gestionar cita
               </p>
             </v-btn>
           </v-col>
@@ -197,6 +208,63 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+
+    <v-dialog v-model="dialogFinish" class="ma-0 pa-0" min-width="500px" width="500px" content-class="dialog">
+      <v-card class="ma-0 pa-10 py-12 align-center justify-center" align="center" justify="center">
+        <v-row class="ma-0 pa-0" align="end" justify="end">
+          <span
+            class="ma-0 pa-0 mdi mdi-close"
+            rounded
+            color="transparent"
+            elevation="0"
+            style="cursor: pointer !important;"
+            @click="dialogFinish = false"
+          />
+        </v-row>
+
+        <v-card-title class="ma-0 pa-0 align-center align-center justify-center">
+          <p class="ma-0 pa-0 dialog-title" style="font-size: 22px;">
+            Gestión de cita
+          </p>
+        </v-card-title>
+
+        <v-card-text class="ma-0 pa-0 mt-15">
+          <v-form ref="updateForm" v-model="validFinishForm">
+            <v-row>
+              <v-text-field v-model="reason_finish" clearable type="text" rounded label="Motivo" outlined :rules="[required]" />
+            </v-row>
+
+            <v-row>
+              <v-text-field v-model="mood_finish" clearable type="text" rounded label="Estado anínimo" outlined :rules="[required]" />
+            </v-row>
+
+            <v-row>
+              <v-text-field v-model="progress_finish" clearable type="text" rounded label="Avances" outlined :rules="[required]" />
+            </v-row>
+
+            <v-row>
+              <v-text-field v-model="techniques_finish" clearable type="text" rounded label="Técnicas" outlined :rules="[required]" />
+            </v-row>
+
+            <v-row>
+              <v-text-field v-model="observations_finish" clearable type="text" rounded label="Observaciones" outlined :rules="[required]" />
+            </v-row>
+
+            <v-row>
+              <v-text-field v-model="activities_finish" clearable type="text" rounded label="Actividades" outlined :rules="[required]" />
+            </v-row>
+          </v-form>
+        </v-card-text>
+
+        <v-card-actions class="ma-0 pa-0 mt-8 align-center justify-center">
+          <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="dateFinishConfirmed ()">
+            <p class="ma-0 pa-0 dialog-btn-text">
+              Finalizar Sesión
+            </p>
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -224,6 +292,14 @@ export default {
       validUpdateForm: false,
       dates_update: false,
       date_update: '',
+      dialogFinish: false,
+      validFinishForm: false,
+      reason_finish: '',
+      mood_finish: '',
+      progress_finish: '',
+      techniques_finish: '',
+      observations_finish: '',
+      activities_finish: '',
       schedule_update: null,
       required: value => !!value || 'Required field',
       password: value => (value && value.length > 5) || 'Password must be more than 5 chars',
@@ -318,10 +394,16 @@ export default {
     updateDate () {
       this.dialogUpdate = true
     },
+    dateFinish () {
+      this.dialogFinish = true
+    },
     deleteDateConfirmed () {
       //
     },
     updateDateConfirmed () {
+      //
+    },
+    dateFinishConfirmed () {
       //
     },
     closeDatePicker () {
