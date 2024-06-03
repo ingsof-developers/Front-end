@@ -1,86 +1,92 @@
 [
   {
+    "name": "geci",
+    "path": "/geci",
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\geci\\\\index.vue",
+    "chunkName": "pages/geci/index"
+  },
+  {
     "name": "gecia",
     "path": "/gecia",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\gecia\\\\index.vue",
-    "chunkName": "pages/gecia/index",
-    "_name": "_6ea90d6f"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\gecia\\\\index.vue",
+    "chunkName": "pages/gecia/index"
   },
   {
     "name": "gecid",
     "path": "/gecid",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\gecid\\\\index.vue",
-    "chunkName": "pages/gecid/index",
-    "_name": "_f48404e8"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\gecid\\\\index.vue",
+    "chunkName": "pages/gecid/index"
   },
   {
     "name": "signup",
     "path": "/signup",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
-    "chunkName": "pages/signup/index",
-    "_name": "_31f12550"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
+    "chunkName": "pages/signup/index"
+  },
+  {
+    "name": "geci-managers",
+    "path": "/geci/managers",
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\geci\\\\managers\\\\index.vue",
+    "chunkName": "pages/geci/managers/index"
+  },
+  {
+    "name": "geci-signup",
+    "path": "/geci/signup",
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\geci\\\\signup\\\\index.vue",
+    "chunkName": "pages/geci/signup/index"
   },
   {
     "name": "gecia-date",
     "path": "/gecia/date",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\gecia\\\\date\\\\index.vue",
-    "chunkName": "pages/gecia/date/index",
-    "_name": "_1714f1c1"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\gecia\\\\date\\\\index.vue",
+    "chunkName": "pages/gecia/date/index"
   },
   {
     "name": "gecia-datebook",
     "path": "/gecia/datebook",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\gecia\\\\datebook\\\\index.vue",
-    "chunkName": "pages/gecia/datebook/index",
-    "_name": "_529eb7b8"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\gecia\\\\datebook\\\\index.vue",
+    "chunkName": "pages/gecia/datebook/index"
   },
   {
     "name": "gecia-departments",
     "path": "/gecia/departments",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\gecia\\\\departments\\\\index.vue",
-    "chunkName": "pages/gecia/departments/index",
-    "_name": "_a44fe3f8"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\gecia\\\\departments\\\\index.vue",
+    "chunkName": "pages/gecia/departments/index"
   },
   {
     "name": "gecia-history",
     "path": "/gecia/history",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\gecia\\\\history\\\\index.vue",
-    "chunkName": "pages/gecia/history/index",
-    "_name": "_0cea2f1e"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\gecia\\\\history\\\\index.vue",
+    "chunkName": "pages/gecia/history/index"
   },
   {
     "name": "gecia-profile",
     "path": "/gecia/profile",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\gecia\\\\profile\\\\index.vue",
-    "chunkName": "pages/gecia/profile/index",
-    "_name": "_07a5b43c"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\gecia\\\\profile\\\\index.vue",
+    "chunkName": "pages/gecia/profile/index"
   },
   {
     "name": "gecid-datebook",
     "path": "/gecid/datebook",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\gecid\\\\datebook\\\\index.vue",
-    "chunkName": "pages/gecid/datebook/index",
-    "_name": "_33a030d6"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\gecid\\\\datebook\\\\index.vue",
+    "chunkName": "pages/gecid/datebook/index"
   },
   {
     "name": "gecid-history",
     "path": "/gecid/history",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\gecid\\\\history\\\\index.vue",
-    "chunkName": "pages/gecid/history/index",
-    "_name": "_1f55c8f4"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\gecid\\\\history\\\\index.vue",
+    "chunkName": "pages/gecid/history/index"
   },
   {
     "name": "gecid-profile",
     "path": "/gecid/profile",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\gecid\\\\profile\\\\index.vue",
-    "chunkName": "pages/gecid/profile/index",
-    "_name": "_2d7094bf"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\gecid\\\\profile\\\\index.vue",
+    "chunkName": "pages/gecid/profile/index"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\bueno\\\\Front-end\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_27afa230"
+    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
   }
 ]
