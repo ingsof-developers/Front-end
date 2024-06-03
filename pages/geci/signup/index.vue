@@ -20,10 +20,10 @@
 
       <v-sheet width="100%" color="#fcfdff" class="ma-0 pa-0 pa-10" justify="center" align="center" style="display: flex !important; align-content: center !important; justify-content: center !important;">
         <div class="pa-0 ma-0 d-flex align-center flex-column justify-center" justify="center" align="center">
-          <v-card class="d-flex flex-column px-10 py-10 justify-center" width="500" rounded="xxl" color="#eff7fe" justify="center" align="center">
+          <v-card class="d-flex flex-column px-10 py-10 justify-center" width="550" rounded="xxl" color="#eff7fe" justify="center" align="center">
             <v-card-title justify="center" align="center" class="mt-10">
               <v-row class="ma-0 pa-0" style="width: 100%; font-size: 40px; font-weight: 600;" justify="center" align="center">
-                Register Managers
+                Registro de Encargados
               </v-row>
             </v-card-title>
 
@@ -42,11 +42,11 @@
                 </v-row>
 
                 <v-row>
-                  <v-text-field v-model="password_user" clearable type="password" rounded label="Password" outlined :rules="[required, password]" />
+                  <v-text-field v-model="password_user" clearable type="password" rounded label="Contraseña" outlined :rules="[required, password]" />
                 </v-row>
 
                 <v-row>
-                  <v-text-field v-model="phone" clearable type="text" rounded label="Phone" outlined :rules="[required]" />
+                  <v-text-field v-model="phone" clearable type="text" rounded label="Teléfono" outlined :rules="[required]" />
                 </v-row>
               </v-form>
             </v-card-text>
@@ -54,7 +54,7 @@
             <v-card-actions class="ma-0 pa-4">
               <v-row>
                 <v-btn block rounded color="#00468C" class="ma-0 pa-6" @click="signup">
-                  <span class="ma-0 pa-0" style="text-transform: none; color: white; font-size: 18px; font-weight :bold;">Register</span>
+                  <span class="ma-0 pa-0" style="text-transform: none; color: white; font-size: 18px; font-weight :bold;">Registrar</span>
                 </v-btn>
               </v-row>
             </v-card-actions>
@@ -69,7 +69,7 @@
 
 <script>
 export default {
-  name: 'SignUp',
+  name: 'SignUpGeci',
   data () {
     return {
       name_user: null,
