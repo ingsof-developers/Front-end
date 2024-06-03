@@ -28,6 +28,13 @@
     "_name": "_2ab6cf54"
   },
   {
+    "name": "geci-managers",
+    "path": "/geci/managers",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/geci/managers/index.vue",
+    "chunkName": "pages/geci/managers/index",
+    "_name": "_4fad76ae"
+  },
+  {
     "name": "geci-signup",
     "path": "/geci/signup",
     "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/geci/signup/index.vue",

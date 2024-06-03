@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/max-attributes-per-line -->
 <template>
   <v-app>
     <v-main>
@@ -49,7 +50,7 @@
           <v-divider class="mt-10 mb-15" />
 
           <v-row class="ma-0 pa-0" align="center" justify="center">
-            <v-col v-for="funcion in funciones" :key="funcion" class="ma-0 pa-0" justify="center" align="center">
+            <v-col v-for="funcion in funciones" :key="funcion" cols="3" class="ma-0 pa-0" justify="center" align="center">
               <v-card
                 class="ma-0 d-flex flex-column pa-10 justify-center my-5"
                 height="200"
@@ -75,11 +76,12 @@
 <script>
 
 export default {
-  name: 'GECID',
+  name: 'GECI',
   data () {
     return {
       funciones: [
-        { name: 'Register managers', path: '/geci/signup' }
+        { name: 'Listado de encargados', path: '/geci/managers' },
+        { name: 'Registrar encargados', path: '/geci/signup' }
       ]
     }
   },
