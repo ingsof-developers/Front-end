@@ -36,7 +36,7 @@
           </p>
         </v-row>
 
-        <ui-calendar class="ma-0 pa-0 mt-5" :citas-pasadas="departamento_data" />
+        <ui-calendar-department class="ma-0 pa-0 mt-5" :citas-pasadas="departamento_data" />
       </v-sheet>
     </v-main>
   </v-app>
@@ -45,7 +45,7 @@
 <script>
 
 export default {
-  name: 'GeciaDate',
+  name: 'GecidDateBook',
   data () {
     return {
       departamento_data: null,
