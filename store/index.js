@@ -68,6 +68,13 @@ export const state = () => ({
       { color: 'grey darken-1', message: 'Perfil', path: '/gecid/profile' },
       { color: 'grey darken-1', message: 'Log Out', path: '/' }
     ]
+  },
+  geci_profile: {
+    icon: 'mdi-account',
+    title: 'Perfil',
+    items: [
+      { color: 'grey darken-1', message: 'Log Out', path: '/' }
+    ]
   }
 })
 

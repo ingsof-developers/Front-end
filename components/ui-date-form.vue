@@ -102,12 +102,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-.v-menu__content
-{
-  border-radius: 50px !important;
-}
-
-</style>

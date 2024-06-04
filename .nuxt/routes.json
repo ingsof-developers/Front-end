@@ -1,5 +1,12 @@
 [
   {
+    "name": "geci",
+    "path": "/geci",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/geci/index.vue",
+    "chunkName": "pages/geci/index",
+    "_name": "_7b94c6c2"
+  },
+  {
     "name": "gecia",
     "path": "/gecia",
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\index.vue",
@@ -16,6 +23,20 @@
     "path": "/signup",
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
     "chunkName": "pages/signup/index"
+  },
+  {
+    "name": "geci-managers",
+    "path": "/geci/managers",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/geci/managers/index.vue",
+    "chunkName": "pages/geci/managers/index",
+    "_name": "_4fad76ae"
+  },
+  {
+    "name": "geci-signup",
+    "path": "/geci/signup",
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/geci/signup/index.vue",
+    "chunkName": "pages/geci/signup/index",
+    "_name": "_abd5ba4a"
   },
   {
     "name": "gecia-date",
