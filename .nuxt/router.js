@@ -37,15 +37,15 @@ export const routerOptions = {
     name: "geci"
   }, {
     path: "/gecia",
-    component: _e9be9116,
+    component: _6b19072a,
     name: "gecia"
   }, {
     path: "/gecid",
-    component: _49cecfb8,
+    component: _3cef26f0,
     name: "gecid"
   }, {
     path: "/signup",
-    component: _2ab6cf54,
+    component: _4f7495d4,
     name: "signup"
   }, {
     path: "/geci/managers",
@@ -57,39 +57,39 @@ export const routerOptions = {
     name: "geci-signup"
   }, {
     path: "/gecia/date",
-    component: _33b16f1e,
+    component: _19119886,
     name: "gecia-date"
   }, {
     path: "/gecia/datebook",
-    component: _a0a7bd72,
+    component: _6050c898,
     name: "gecia-datebook"
   }, {
     path: "/gecia/departments",
-    component: _b9b93472,
+    component: _257a4ef0,
     name: "gecia-departments"
   }, {
     path: "/gecia/history",
-    component: _65db068c,
+    component: _47e794f5,
     name: "gecia-history"
   }, {
     path: "/gecia/profile",
-    component: _17d98b8f,
+    component: _560260c0,
     name: "gecia-profile"
   }, {
     path: "/gecid/datebook",
-    component: _6691a464,
+    component: _6368cb91,
     name: "gecid-datebook"
   }, {
     path: "/gecid/history",
-    component: _3611a1fd,
+    component: _6db27578,
     name: "gecid-history"
   }, {
     path: "/gecid/profile",
-    component: _fe4e9e5c,
+    component: _7bcd4143,
     name: "gecid-profile"
   }, {
     path: "/",
-    component: _5cea94b2,
+    component: _3dd6636c,
     name: "index"
   }],
 
