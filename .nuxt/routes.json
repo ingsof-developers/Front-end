@@ -12,6 +12,7 @@
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\gecia\\\\index.vue",
     "chunkName": "pages/gecia/index",
     "_name": "_262b8cef"
+
   },
   {
     "name": "gecid",
@@ -26,6 +27,7 @@
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\historial\\\\index.vue",
     "chunkName": "pages/historial/index",
     "_name": "_159927c6"
+
   },
   {
     "name": "signup",
@@ -33,6 +35,7 @@
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
     "chunkName": "pages/signup/index",
     "_name": "_6abe95d0"
+
   },
   {
     "name": "geci-managers",
@@ -54,48 +57,61 @@
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\gecia\\\\date\\\\index.vue",
     "chunkName": "pages/gecia/date/index",
     "_name": "_4f99d141"
+
   },
   {
     "name": "gecia-datebook",
     "path": "/gecia/datebook",
+
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\gecia\\\\datebook\\\\index.vue",
     "chunkName": "pages/gecia/datebook/index",
     "_name": "_12b05190"
+
   },
   {
     "name": "gecia-departments",
     "path": "/gecia/departments",
+
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\gecia\\\\departments\\\\index.vue",
     "chunkName": "pages/gecia/departments/index",
     "_name": "_a0fe82f8"
+
   },
   {
     "name": "gecia-history",
     "path": "/gecia/history",
+
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\gecia\\\\history\\\\index.vue",
     "chunkName": "pages/gecia/history/index",
     "_name": "_281fd8f1"
+
   },
   {
     "name": "gecia-profile",
     "path": "/gecia/profile",
+
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\gecia\\\\profile\\\\index.vue",
     "chunkName": "pages/gecia/profile/index",
     "_name": "_363aa4bc"
+
   },
   {
     "name": "gecid-datebook",
     "path": "/gecid/datebook",
+
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\gecid\\\\datebook\\\\index.vue",
     "chunkName": "pages/gecid/datebook/index",
     "_name": "_eb8df1d6"
+
   },
   {
     "name": "gecid-history",
     "path": "/gecid/history",
+
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\gecid\\\\history\\\\index.vue",
     "chunkName": "pages/gecid/history/index",
     "_name": "_4deab974"
+
   },
   {
     "name": "gecid-profile",
@@ -110,6 +126,7 @@
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\gecid\\\\table\\\\index.vue",
     "chunkName": "pages/gecid/table/index",
     "_name": "_7f53c97a"
+
   },
   {
     "name": "index",
@@ -117,5 +134,6 @@
     "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\final-tabla\\\\Front-end\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
     "_name": "_2fae1f68"
+
   }
 ]

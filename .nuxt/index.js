@@ -221,6 +221,7 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_b87860f0 === 'function') {
     await nuxt_plugin_axios_b87860f0(app.context, inject)
+
   }
 
   if (typeof nuxt_plugin_uicomponents_4f54119c === 'function') {

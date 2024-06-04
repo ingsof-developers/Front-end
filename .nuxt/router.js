@@ -44,6 +44,7 @@ export const routerOptions = {
   }, {
     path: "/gecid",
     component: _3d407d0c,
+
     name: "gecid"
   }, {
     path: "/historial",
@@ -52,6 +53,7 @@ export const routerOptions = {
   }, {
     path: "/signup",
     component: _6abe95d0,
+
     name: "signup"
   }, {
     path: "/geci/managers",
@@ -63,6 +65,7 @@ export const routerOptions = {
     name: "geci-signup"
   }, {
     path: "/gecia/date",
+
     component: _4f99d141,
     name: "gecia-date"
   }, {
@@ -92,6 +95,7 @@ export const routerOptions = {
   }, {
     path: "/gecid/profile",
     component: _5c05853f,
+
     name: "gecid-profile"
   }, {
     path: "/gecid/table",
@@ -100,6 +104,7 @@ export const routerOptions = {
   }, {
     path: "/",
     component: _2fae1f68,
+
     name: "index"
   }],
 
