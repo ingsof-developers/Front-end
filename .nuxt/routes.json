@@ -2,8 +2,9 @@
   {
     "name": "geci",
     "path": "/geci",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\geci\\\\index.vue",
-    "chunkName": "pages/geci/index"
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/geci/index.vue",
+    "chunkName": "pages/geci/index",
+    "_name": "_7b94c6c2"
   },
   {
     "name": "gecia",
@@ -20,20 +21,23 @@
   {
     "name": "signup",
     "path": "/signup",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
-    "chunkName": "pages/signup/index"
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/signup/index.vue",
+    "chunkName": "pages/signup/index",
+    "_name": "_2ab6cf54"
   },
   {
     "name": "geci-managers",
     "path": "/geci/managers",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\geci\\\\managers\\\\index.vue",
-    "chunkName": "pages/geci/managers/index"
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/geci/managers/index.vue",
+    "chunkName": "pages/geci/managers/index",
+    "_name": "_4fad76ae"
   },
   {
     "name": "geci-signup",
     "path": "/geci/signup",
-    "component": "C:\\\\Users\\\\mario\\\\OneDrive\\\\Escritorio\\\\gecci lo nuevo de nuevo\\\\Front-end\\\\pages\\\\geci\\\\signup\\\\index.vue",
-    "chunkName": "pages/geci/signup/index"
+    "component": "/Users/keylaanguiano/Documents/UG/SEXTO SEMESTRE/INGENIERIA DE SOFTWARE/GECI/pages/geci/signup/index.vue",
+    "chunkName": "pages/geci/signup/index",
+    "_name": "_abd5ba4a"
   },
   {
     "name": "gecia-date",

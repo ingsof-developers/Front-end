@@ -2,6 +2,9 @@
   "UiAlert": {
     "description": "Auto imported from components/ui-alert.vue"
   },
+  "UiCalendarDepartment": {
+    "description": "Auto imported from components/ui-calendar-department.vue"
+  },
   "UiCalendar": {
     "description": "Auto imported from components/ui-calendar.vue"
   },
