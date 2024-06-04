@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import departments from '@/assets/departments.json'
+import axios from 'axios'
 
 export default {
   data () {
@@ -66,20 +66,20 @@ export default {
     }
   },
   mounted () {
-    this.departamentos = departments
-    this.getDepartamentoData()
+    this.getCitasData()
   },
   methods: {
-    getDepartamentoData () {
-      this.departamento_data = [
-        { departamentoName: 'Tutoría', fecha: '2024-05-01', hora: '11:00' },
-        { departamentoName: 'Activación física', fecha: '2024-04-26', hora: '12:00' },
-        { departamentoName: 'Activación física', fecha: '2024-04-26', hora: '13:00' },
-        { departamentoName: 'Activación física', fecha: '2024-04-25', hora: '16:00' },
-        { departamentoName: 'Activación', fecha: '2024-02-10', hora: '08:00' },
-        { departamentoName: 'Nutrición', fecha: '2024-03-10', hora: '10:00' },
-        { departamentoName: 'Nutrición', fecha: '2024-03-11', hora: '14:00' }
-      ]
+    async getCitasData () {
+      try {
+        const response = await axios.get('http://localhost:8081/citas/all')
+        this.departamento_data = response.data.map(cita => ({
+          departamentoName: cita.departamentoName,
+          fecha: cita.fecha ? cita.fecha.split('T')[0] : 'N/A', // Provide a default value if fecha is null
+          hora: cita.hora
+        }))
+      } catch (error) {
+        console.error('There was an error!', error)
+      }
     }
   }
 }
