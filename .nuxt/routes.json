@@ -5,6 +5,7 @@
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\geci\\\\index.vue",
     "chunkName": "pages/geci/index",
     "_name": "_b258bbb0"
+
   },
   {
     "name": "gecia",
@@ -12,96 +13,123 @@
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\index.vue",
     "chunkName": "pages/gecia/index",
     "_name": "_6b19072a"
+
   },
   {
     "name": "gecid",
     "path": "/gecid",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecid\\\\index.vue",
     "chunkName": "pages/gecid/index",
     "_name": "_3cef26f0"
+
   },
   {
     "name": "signup",
     "path": "/signup",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\signup\\\\index.vue",
     "chunkName": "pages/signup/index",
     "_name": "_4f7495d4"
+
   },
   {
     "name": "geci-managers",
     "path": "/geci/managers",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\geci\\\\managers\\\\index.vue",
     "chunkName": "pages/geci/managers/index",
     "_name": "_7755af02"
+
   },
   {
     "name": "geci-signup",
     "path": "/geci/signup",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\geci\\\\signup\\\\index.vue",
     "chunkName": "pages/geci/signup/index",
     "_name": "_3ed54ee0"
+
   },
   {
     "name": "gecia-date",
     "path": "/gecia/date",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\date\\\\index.vue",
     "chunkName": "pages/gecia/date/index",
     "_name": "_19119886"
+
   },
   {
     "name": "gecia-datebook",
     "path": "/gecia/datebook",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\datebook\\\\index.vue",
     "chunkName": "pages/gecia/datebook/index",
     "_name": "_6050c898"
+
   },
   {
     "name": "gecia-departments",
     "path": "/gecia/departments",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\departments\\\\index.vue",
     "chunkName": "pages/gecia/departments/index",
     "_name": "_257a4ef0"
+
   },
   {
     "name": "gecia-history",
     "path": "/gecia/history",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\history\\\\index.vue",
     "chunkName": "pages/gecia/history/index",
     "_name": "_47e794f5"
+
   },
   {
     "name": "gecia-profile",
     "path": "/gecia/profile",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecia\\\\profile\\\\index.vue",
     "chunkName": "pages/gecia/profile/index",
     "_name": "_560260c0"
+
   },
   {
     "name": "gecid-datebook",
     "path": "/gecid/datebook",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecid\\\\datebook\\\\index.vue",
     "chunkName": "pages/gecid/datebook/index",
     "_name": "_6368cb91"
+
   },
   {
     "name": "gecid-history",
     "path": "/gecid/history",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecid\\\\history\\\\index.vue",
     "chunkName": "pages/gecid/history/index",
     "_name": "_6db27578"
+
   },
   {
     "name": "gecid-profile",
     "path": "/gecid/profile",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\gecid\\\\profile\\\\index.vue",
     "chunkName": "pages/gecid/profile/index",
     "_name": "_7bcd4143"
+
   },
   {
     "name": "index",
     "path": "/",
+
     "component": "D:\\\\Users\\\\chama\\\\Desktop\\\\developers\\\\Front-end\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
     "_name": "_3dd6636c"
+
   }
 ]

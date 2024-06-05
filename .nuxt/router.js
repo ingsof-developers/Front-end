@@ -20,6 +20,7 @@ const _6db27578 = () => interopDefault(import('..\\pages\\gecid\\history\\index.
 const _7bcd4143 = () => interopDefault(import('..\\pages\\gecid\\profile\\index.vue' /* webpackChunkName: "pages/gecid/profile/index" */))
 const _3dd6636c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
+
 const emptyFn = () => {}
 
 Vue.use(Router)
@@ -34,62 +35,78 @@ export const routerOptions = {
   routes: [{
     path: "/geci",
     component: _b258bbb0,
+
     name: "geci"
   }, {
     path: "/gecia",
-    component: _6b19072a,
+    component: _262b8cef,
     name: "gecia"
   }, {
     path: "/gecid",
-    component: _3cef26f0,
+    component: _3d407d0c,
+
     name: "gecid"
   }, {
+    path: "/historial",
+    component: _159927c6,
+    name: "historial"
+  }, {
     path: "/signup",
-    component: _4f7495d4,
+    component: _6abe95d0,
+
     name: "signup"
   }, {
     path: "/geci/managers",
+
     component: _7755af02,
     name: "geci-managers"
   }, {
     path: "/geci/signup",
     component: _3ed54ee0,
+
     name: "geci-signup"
   }, {
     path: "/gecia/date",
-    component: _19119886,
+
+    component: _4f99d141,
     name: "gecia-date"
   }, {
     path: "/gecia/datebook",
-    component: _6050c898,
+    component: _12b05190,
     name: "gecia-datebook"
   }, {
     path: "/gecia/departments",
-    component: _257a4ef0,
+    component: _a0fe82f8,
     name: "gecia-departments"
   }, {
     path: "/gecia/history",
-    component: _47e794f5,
+    component: _281fd8f1,
     name: "gecia-history"
   }, {
     path: "/gecia/profile",
-    component: _560260c0,
+    component: _363aa4bc,
     name: "gecia-profile"
   }, {
     path: "/gecid/datebook",
-    component: _6368cb91,
+    component: _eb8df1d6,
     name: "gecid-datebook"
   }, {
     path: "/gecid/history",
-    component: _6db27578,
+    component: _4deab974,
     name: "gecid-history"
   }, {
     path: "/gecid/profile",
-    component: _7bcd4143,
+    component: _5c05853f,
+
     name: "gecid-profile"
   }, {
+    path: "/gecid/table",
+    component: _7f53c97a,
+    name: "gecid-table"
+  }, {
     path: "/",
-    component: _3dd6636c,
+    component: _2fae1f68,
+
     name: "index"
   }],
 
