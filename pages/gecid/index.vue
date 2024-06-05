@@ -46,13 +46,13 @@
             <v-col class="ma-0 pa-0">
               <v-row class="ma-0 pa-0">
                 <p style="font-size: 35px;">
-                  Nombre y Apellidos
+                  Nombre: {{ this.$store.state.user.name }}
                 </p>
               </v-row>
 
               <v-row class="ma-0 pa-0">
                 <p style="font-size: 25px;">
-                  Correo
+                  Correo: {{ this.$store.state.user.email }}
                 </p>
               </v-row>
             </v-col>

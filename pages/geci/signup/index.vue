@@ -48,6 +48,17 @@
                 <v-row>
                   <v-text-field v-model="phone" clearable type="text" rounded label="Teléfono" outlined :rules="[required]" />
                 </v-row>
+                <v-row>
+                  <v-select
+                    v-model="departmentId"
+                    :items="departments"
+                    item-text="name"
+                    item-value="id"
+                    label="Departamento"
+                    outlined
+                    :rules="[required]"
+                  />
+                </v-row>
               </v-form>
             </v-card-text>
 
@@ -77,6 +88,14 @@ export default {
       maternal_surname_user: null,
       password_user: null,
       phone: null,
+      departmentId: null,
+      departments: [
+        { id: 1, name: 'Psicología' },
+        { id: 2, name: 'Nutrición' },
+        { id: 3, name: 'Activación Física' },
+        { id: 4, name: 'Orientación Educativa' },
+        { id: 5, name: 'Tutoría' }
+      ],
       showAlert: false,
       alertText: '',
       alertColor: '',
@@ -97,13 +116,14 @@ export default {
 
       if (this.validForm) {
         try {
-          const res = await this.$axios.post('http://localhost:8081/auth/register',
+          const res = await this.$axios.post('http://localhost:8081/tutor/register',
             {
               username: this.name_user,
               lastName: this.last_name_user,
               maternalSurname: this.maternal_surname_user,
               password: this.password_user,
-              telefono: this.phone
+              telefono: this.phone,
+              departamentoId: this.departmentId
             })
 
           console.log('@ Keyla => Res ', res)

@@ -71,7 +71,8 @@ export default {
   methods: {
     async getCitasData () {
       try {
-        const response = await axios.get('http://localhost:8081/citas/all')
+        const email = this.$store.state.user.email
+        const response = await axios.get(`http://localhost:8081/citas/student/${email}`)
         this.departamento_data = response.data.map(cita => ({
           departamentoName: cita.departamentoName,
           fecha: cita.fecha ? cita.fecha.split('T')[0] : 'N/A', // Provide a default value if fecha is null

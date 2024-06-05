@@ -80,7 +80,7 @@
           <v-spacer />
 
           <v-col class="ma-0 pa-0">
-            <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="deleteDate ()">
+            <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="deleteCita(clickedEventId)">
               <p class="ma-0 pa-0 dialog-btn-text">
                 Cancelar Cita
               </p>
@@ -270,7 +270,7 @@
 
 <script>
 import moment from 'moment'
-
+import axios from 'axios'
 export default {
   props: {
     citasPasadas: {
@@ -285,6 +285,7 @@ export default {
       events: [],
       dialog: false,
       dialogMessage: '',
+      clickedEventId: null,
       mode: 'stack',
       departamento_data: [],
       dialogCancel: false,
@@ -318,6 +319,50 @@ export default {
     this.getEvents()
   },
   methods: {
+    async deleteCita (citaId) {
+      try {
+        const response = await axios.delete(`http://localhost:8081/citas/${citaId}`)
+
+        if (response.status === 200) {
+          // Cita eliminada con éxito, cerrar el diálogo
+          this.dialog = false
+        } else {
+          // Manejar error
+          console.error('Error al eliminar la cita:', response)
+        }
+      } catch (error) {
+        console.error('Error al eliminar la cita:', error)
+      }
+    },
+    async reprogramarCita (citaId, nuevosDatos) {
+      try {
+        const response = await axios.put(`http://localhost:8081/citas/${citaId}`, nuevosDatos)
+
+        if (response.status === 200) {
+          // Cita actualizada con éxito, cerrar el diálogo
+          this.dialogUpdate = false
+          // Actualizar las citas después de reprogramar una
+          this.getCitasData()
+        } else {
+          // Manejar error
+          console.error('Error al reprogramar la cita:', response)
+        }
+      } catch (error) {
+        console.error('Error al reprogramar la cita:', error)
+      }
+    },
+    submitUpdateForm () {
+      // Valida el formulario
+      const valid = this.$refs.updateForm.validate()
+
+      // Si el formulario es válido, reprograma la cita
+      if (valid) {
+        const fecha = this.date_update
+        const hora = this.schedule_update
+
+        this.reprogramarCita(this.clickedEventId, { fecha, hora })
+      }
+    },
     getEvents (citas) {
       this.events = []
 
@@ -327,6 +372,7 @@ export default {
           const endDate = new Date(startDate.getTime() + (60 * 60 * 1000))
 
           this.events.push({
+            id: cita.id,
             name: cita.departamentoName,
             start: startDate,
             end: endDate,
@@ -334,6 +380,7 @@ export default {
             timed: true
           })
         })
+        console.log(this.events)
       }
     },
     getEventColor (event) {
@@ -348,6 +395,8 @@ export default {
       return `${monthName} ${year}`
     },
     showDialog (clickedEvent) {
+      console.log(clickedEvent)
+      this.clickedEventId = clickedEvent.event.id
       const event = clickedEvent.event
 
       if (event && event.start && event.name) {
@@ -401,7 +450,7 @@ export default {
       //
     },
     updateDateConfirmed () {
-      //
+      this.submitUpdateForm()
     },
     dateFinishConfirmed () {
       //

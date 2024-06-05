@@ -48,8 +48,8 @@
     </v-main>
   </v-app>
 </template>
-
 <script>
+import { jwtDecode } from 'jwt-decode'
 export default {
   name: 'LogIn',
   layout: 'ui-login-signup',
@@ -81,17 +81,50 @@ export default {
 
           console.log('@ Keyla => Res ', res)
 
-          if (res.data.token) {
+          if (res && res.data && res.data.token) {
             this.showAlert = true
             this.alertText = res.data.message
             this.alertColor = '#6CDACE'
             this.alertType = 'success'
 
-            setTimeout(() => {
-              this.showAlert = false
+            const token = res.data.token
+            const decodedToken = jwtDecode(token)
 
-              this.$router.push('/gecia')
-            }, 3000)
+            this.$store.commit('setUser', {
+              name: decodedToken.fullName,
+              email: decodedToken.email
+            })
+            console.log(this.$store.state.user) // Debería imprimir el objeto del usuario
+            console.log(JSON.stringify(decodedToken, null, 2))
+            if (decodedToken && decodedToken.roles[0]) {
+              const userRole = decodedToken.roles
+              console.log(userRole)
+              // Redirigir al usuario basándose en su rol
+              let routeToRedirect = ''
+              switch (userRole[0]) {
+                case 'ROLE_ADMIN':
+                  routeToRedirect = '/geci'
+                  break
+                case 'ROLE_USER':
+                  routeToRedirect = '/user'
+                  break
+                case 'ROLE_TUTOR':
+                  routeToRedirect = '/gecid/'
+                  break
+                case 'ROLE_STUDENT':
+                  routeToRedirect = '/gecia'
+                  break
+                default:
+                  routeToRedirect = '/default'
+              }
+
+              setTimeout(() => {
+                this.showAlert = false
+
+                // Redirigir al usuario a la ruta correspondiente
+                this.$router.push(routeToRedirect)
+              }, 3000)
+            }
           }
         } catch (err) {
           console.log('@ Keyla => Error ', err)
