@@ -66,7 +66,7 @@
           </v-card-title>
 
           <v-card-actions class="ma-0 pa-0 mt-10 align-center justify-center">
-            <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="deleteManagerCorfirmed ()">
+            <v-btn class="ma-0 pa-5" rounded color="#00468C" @click="deleteManagerConfirmed">
               <p class="ma-0 pa-0 dialog-btn-text">
                 Eliminar
               </p>
@@ -132,24 +132,17 @@
 </template>
 
 <script>
-
 export default {
   name: 'GeciManagers',
   data () {
     return {
       headers_managers: [
-        { text: 'Nombre', value: 'name', align: 'center', sortable: true },
-        { text: 'Apellido Paterno', value: 'last_name', align: 'center', sortable: true },
-        { text: 'Apellido Materno', value: 'maternal_surname', align: 'center', sortable: true },
-        { text: 'Email', value: 'email', align: 'center', sortable: false },
-        { text: 'Teléfono', value: 'phone', align: 'center', sortable: false },
-        { text: 'Contraseña', value: 'password', align: 'center', sortable: false },
+        { text: 'Nombre Completo', value: 'name', align: 'center', sortable: true },
+        { text: 'Email', value: 'correo', align: 'center', sortable: false },
+        { text: 'Teléfono', value: 'telefono', align: 'center', sortable: false },
         { text: 'Acciones', value: 'actions', align: 'center', sortable: false }
       ],
-      managers: [
-        { name: 'x', last_name: 'x', maternal_surname: 'x', email: 'x', phone: 'x', password: 'x' },
-        { name: 'x', last_name: 'x', maternal_surname: 'x', email: 'x', phone: 'x', password: 'x' }
-      ],
+      managers: [],
       showDialogDelete: false,
       showDialogUpdate: false,
       validUpdateManagerForm: false,
@@ -157,7 +150,8 @@ export default {
       last_name_update: '',
       maternal_surname_update: '',
       password_update: '',
-      phone_update: ''
+      phone_update: '',
+      selectedManager: null
     }
   },
   computed: {
@@ -165,18 +159,56 @@ export default {
       return this.$store.state.geci_profile
     }
   },
+  mounted () {
+    this.fetchManagers()
+  },
   methods: {
-    deleteManager (item) {
+    async fetchManagers () {
+      try {
+        const res = await this.$axios.get('http://localhost:8081/tutor/all')
+        this.managers = res.data
+      } catch (err) {
+        console.log('Error fetching managers:', err)
+      }
+    },
+    // eslint-disable-next-line require-await
+    async deleteManager (manager) {
+      this.selectedManager = manager
       this.showDialogDelete = true
     },
-    updateManager (item) {
+    // eslint-disable-next-line require-await
+    async updateManager (manager) {
+      this.selectedManager = manager
       this.showDialogUpdate = true
     },
-    deleteManagerCorfirmed () {
-      //
+    async deleteManagerConfirmed () {
+      if (this.selectedManager) {
+        try {
+          await this.$axios.delete(`http://localhost:8081/tutor/delete/${this.selectedManager.id}`)
+          this.fetchManagers() // Refresh the managers list
+        } catch (err) {
+          console.log('Error deleting manager:', err)
+        }
+        this.showDialogDelete = false
+      }
     },
-    updateManagerConfirmed () {
-      //
+    async updateManagerConfirmed () {
+      if (this.selectedManager) {
+        const updatedData = {
+          username: this.name_update,
+          lastName: this.last_name_update,
+          maternalSurname: this.maternal_surname_update,
+          password: this.password_update,
+          telefono: this.phone_update
+        }
+        try {
+          await this.$axios.put(`http://localhost:8081/tutor/update/${this.selectedManager.id}`, updatedData)
+          this.fetchManagers() // Refresh the managers list
+        } catch (err) {
+          console.log('Error updating manager:', err)
+        }
+        this.showDialogUpdate = false
+      }
     }
   }
 }

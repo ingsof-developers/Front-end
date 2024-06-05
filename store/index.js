@@ -75,9 +75,14 @@ export const state = () => ({
     items: [
       { color: 'grey darken-1', message: 'Log Out', path: '/' }
     ]
-  }
+  },
+  user: null
 })
 
-export const mutations = {}
+export const mutations = {
+  setUser (state, user) {
+    state.user = user
+  }
+}
 
 export const actions = {}
